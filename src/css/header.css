@@ -1,0 +1,13 @@
+.contenedor{
+  height: 100px;             /* Limita la altura máxima del contenedor */
+  overflow: hidden;         /* Oculta cualquier parte del logo que se salga */
+  display: flex;
+  align-items: center;
+  
+  .iconten{
+    height: 130px;
+    padding-top: -40px ;
+  }
+  
+}
+
