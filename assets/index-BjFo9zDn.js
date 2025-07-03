@@ -1,0 +1,324 @@
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))l(s);new MutationObserver(s=>{for(const o of s)if(o.type==="childList")for(const i of o.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&l(i)}).observe(document,{childList:!0,subtree:!0});function t(s){const o={};return s.integrity&&(o.integrity=s.integrity),s.referrerPolicy&&(o.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?o.credentials="include":s.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function l(s){if(s.ep)return;s.ep=!0;const o=t(s);fetch(s.href,o)}})();function r(){return`
+    <div class="hidden py-2 bg-gray-100 sm:block">
+      <!-- Contenedor interno para el contenido, ahora ocupa todo el ancho con padding horizontal -->
+      <div class="px-4 w-full">
+        <!-- Flexbox para alinear los elementos horizontalmente, permitir que se envuelvan y justificar al final (derecha) -->
+        <!-- space-x-2 para pantallas pequeñas, space-x-4 para pantallas sm y más grandes -->
+        <div class="flex flex-wrap justify-end space-x-2 sm:space-x-4">
+          <!-- Elemento de contacto para la dirección (siempre visible) -->
+          <div class="flex items-center">
+            <!-- min-w-0 permite que el contenido del enlace se encoja si es necesario para evitar desbordamiento -->
+            <a href="#" class="flex items-center p-1 space-x-2 min-w-0 " style="color: #aa252e">
+              <!-- Icono SVG para la dirección -->
+              <svg class="flex-shrink-0 w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" id="Capa_1" data-name="Capa 1" viewBox="0 0 325 325">
+                <path d="M153.3,291.46c-9.89-14.84-19.13-28.97-28.65-42.92-15.94-23.37-32.4-46.41-48.02-69.99-11.84-17.88-20.76-37.1-24.42-58.62C41.24,55.54,95.33-4.14,160.51,.23c48.72,3.26,84.85,40.93,92.89,85.64,5.88,32.74-3.54,62.19-20.97,89.1-19.98,30.83-41.45,60.71-62.21,91.03-5.59,8.17-10.96,16.51-16.91,25.46m-.49-138.47c29.76,.16,54.73-24.17,54.82-53.38,.09-30.48-24.41-55.53-54.24-55.47-30.01,.04-54.76,24.57-54.79,54.26-.01,30.14,24.11,54.45,54.21,54.59"/>
+                <path d="M186.32,270.23c4.59-10.58,4.72-11.38,15.47-9.41,16.55,3.03,32.97,6.91,49.25,11.14,4.71,1.22,9.22,4.29,13.07,7.44,8.93,7.29,9.04,18.71-.87,24.35-9.92,5.65-20.88,10.54-31.99,12.9-54.25,11.4-108.66,11.38-162.72-1.54-8.28-1.98-16.5-5.53-23.78-9.97-12.44-7.61-12.61-20.5,.12-27.71,9.56-5.39,20.51-8.71,31.18-11.7,9.29-2.62,19.04-3.76,28.66-5.01,10.39-1.36,10.45-1.05,14.59,8.92-16.2,2.99-32.61,5.62-48.78,9.19-6.47,1.45-12.73,4.51-18.6,7.72-6.15,3.34-6.12,6.5,.4,9.72,7.32,3.63,15.05,6.78,22.95,8.75,28.48,7.19,57.58,8.51,86.83,8.01,24.99-.44,49.82-2.49,73.95-9.34,6.62-1.87,13.03-4.9,19.11-8.17,4.86-2.62,4.99-6.25-.1-8.29-12.05-4.82-24.39-9.18-36.97-12.33-10.33-2.59-21.15-3.18-31.78-4.67"/>
+              </svg>
+              <span>Calle Garcilaso 265 oficina 01</span>
+            </a>
+          </div>
+          <!-- Elemento de contacto para el blog (siempre visible) -->
+          <div class="flex items-center">
+            <a href="#" class="flex items-center p-1 space-x-2 min-w-0" style="color: #aa252e">
+              <!-- Icono SVG para el blog -->
+              <svg class="flex-shrink-0 w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" id="Capa_1" data-name="Capa 1" viewBox="0 0 325 325">
+                <path d="M.05,198.54C.05,174,.03,149.43,.05,124.88c.02-37.22,27.48-64.95,64.65-65.07,34.89-.11,69.78-.03,104.67,0,5.69,0,10.07,2.35,12.28,7.75,2.04,5.01,1.24,9.74-2.53,13.72-2.65,2.77-5.98,3.93-9.84,3.91-25.37-.03-50.75,0-76.13,0-9.75,0-19.5-.06-29.25,0-21.69,.13-38.42,16.88-38.43,38.52-.03,49.48-.02,98.94-.02,148.39,0,1.75-.1,3.55,.18,5.26,1.6,10.15,13.04,14.26,21.1,7.48,6.46-5.45,12.78-11.12,18.9-16.93,3.85-3.62,8.08-5.14,13.34-5.14,43.82,.11,87.64,.11,131.46,.03,21.63-.03,38.37-16.93,38.45-38.53,.03-8.91-.02-17.85,0-26.76,.02-8.13,5.32-13.94,12.71-13.94,7.41,.02,12.76,5.78,12.68,13.95-.13,11.85,.32,23.78-.78,35.53-2.57,27.31-25.89,51.33-53.14,54.25-13.13,1.44-26.5,.89-39.77,.94-32.18,.09-64.37-.02-96.55,.08-1.67,.02-3.66,.8-4.95,1.89-5.58,4.68-10.76,9.82-16.43,14.37-12.62,10.1-26.6,12.15-41.19,5.01C7.3,302.68,.23,290.72,.1,275.03c-.19-25.49-.05-50.98-.05-76.49"/>
+                <path d="M138.13,195.16c1.39-24.33,9.68-45.97,26.78-63.49,25.49-26.15,51.52-51.77,77.31-77.63,5.9-5.89,11.75-11.82,17.69-17.68,11.4-11.29,27.91-14.31,42.65-7.8,14.17,6.23,23.14,20.62,22.4,36.39-.45,9.9-4.3,18.48-11.3,25.48-24.66,24.68-49.29,49.37-74.04,73.94-9.41,9.35-18.6,19.04-28.86,27.34-16.67,13.51-36.32,19.85-57.75,20.36-10.25,.23-15.09-4.85-14.86-15.11,.02-.61,0-1.19,0-1.79m26.62-9.86c15.01-2.96,27.3-9.47,37.57-19.64,16.53-16.33,32.92-32.82,49.37-49.26,14.19-14.19,28.38-28.39,42.6-42.54,3.69-3.68,6.27-7.74,5.03-13.15-1.09-4.81-4.04-8.17-8.85-9.6-5.27-1.57-9.6,.23-13.39,4.02-30.85,30.91-61.76,61.74-92.59,92.66-8.71,8.74-14.67,19.15-18.07,31.02-.58,1.99-1.03,3.99-1.67,6.48"/>
+                <path d="M82.63,161.32c-6.22,0-12.44,.08-18.65-.02-7.52-.09-13.13-5.59-13.15-12.71,0-7.03,5.4-12.53,12.84-12.6,12.55-.14,25.11-.14,37.65,0,7.6,.08,12.88,5.36,12.94,12.48,.05,7.23-5.44,12.71-12.99,12.84-6.22,.11-12.43,.02-18.65,.02"/>
+                <path d="M82.59,212.11c-6.09,0-12.2,.05-18.3,0-7.74-.06-13.45-5.51-13.47-12.79-.03-7.11,5.55-12.53,13.24-12.6,12.33-.09,24.64-.09,36.96,0,7.78,.06,13.26,5.39,13.24,12.56-.02,7.37-5.66,12.79-13.39,12.84-6.09,.05-12.2,0-18.29,0"/>
+              </svg>
+              <span>Blogs</span>
+            </a>
+          </div>
+          <!-- Elemento de contacto para "Quiénes Somos" (oculto en móvil, visible en sm y superiores) -->
+          <div class="hidden items-center sm:flex">
+            <a href="#" class="flex items-center p-1 space-x-2 min-w-0" style="color: #aa252e">
+              <!-- Icono SVG para "Quiénes Somos" -->
+              <svg class="flex-shrink-0 w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" id="Capa_1" data-name="Capa 1" viewBox="0 0 325 325">
+                <path class="cls-1" d="M120.07,125.53v.1s-.04,.37-.04,.37v.1s-.02,.23-.02,.23v.31s-.03,.04-.03,.04v.36s-.02,.17-.02,.17v.19s-.03,.33-.03,.33v.37s-.02,.26-.02,.26v.58s-.01,.22-.01,.22v.62c.06,9.9,3.34,19.01,8.85,26.39l.15,.21,.17,.22,.33,.43,.08,.09,.25,.32,.04,.04,.29,.36h.01s.29,.37,.29,.37l.05,.06,.25,.3,.3,.33,.14,.19,.16,.17c1.66,1.84,3.47,3.56,5.42,5.11l.24,.2,.1,.06,.72,.54,.02,.02,.33,.26,.37,.25,.18,.14,.18,.14,.27,.19,.1,.06,.33,.23,.05,.02,.37,.25h.04s.34,.25,.34,.25l.1,.07,.28,.17,.18,.1,.2,.14,.25,.16,.13,.07,.34,.19,.04,.04,.39,.23h.02s.37,.21,.37,.21l.1,.05,.29,.19,.19,.09,.22,.12,.25,.11,.14,.1-.34,.17,.06,.04,.4,.19h.01l.39,.21,.1,.05,.48,.22,.23,.1,.27,.12,.99,.43,.42,.19,.09,.04,.33,.14,.16,.05,.27,.1,.25,.1,.51,.2,.09,.04,.43,.14c.52,.2,1.04,.37,1.54,.52l.2,.06,.33,.1,.99,.3h.08s.38,.1,.38,.1l.15,.04,1.05,.27h.01s.13,.04,.13,.04l.42,.09h.04s.46,.09,.46,.09h.05s.4-.11,.4-.11l.14,.02,.32,.07,.23,.04h.01l1.09,.17h.05s1.06,.15,1.06,.15l.33,.05,.23,.02,1.13,.12h.06l.47,.04h.04s.44,.04,.44,.04h.11s.57,.04,.57,.04h.27s.3,.02,.3,.02h.18s.4,.02,.4,.02h1.15s1.15,0,1.15,0h.39s.18-.02,.18-.02h.3s.27-.02,.27-.02h.2s.37-.02,.37-.02h.11s.46-.04,.46-.04h.02s.47-.05,.47-.05h.06l.4-.05h.15s.33-.05,.33-.05l.24-.02,.21-.02,.34-.05,.56-.09h.04l.47-.05h.05s.41-.07,.41-.07l.14-.02,.33-.05,.23-.04,.23-.04,.32-.07,.14-.02,.41-.1h.05s.46-.09,.46-.09h.04s.42-.1,.42-.1l.13-.02,.32-.07,.21-.06,.24-.06,.3-.09,.14-.04,.39-.09h.06s.44-.14,.44-.14h.01l.42-.14,.11-.04,.33-.1,.2-.06,.24-.06,.28-.09,.15-.06,.37-.12,.08-.02,.43-.16,.43-.14,.09-.04,.33-.11,.18-.09,.25-.1,.27-.1,.17-.05,.34-.14,.08-.04,.42-.19,.42-.17,.09-.04,.33-.14,.17-.09,.24-.12,.24-.1,.18-.07,.32-.15,.09-.05,.4-.21,.4-.19,.06-.04,.33-.17,.15-.1,.25-.11,.23-.12,.16-.09,.3-.19,.09-.05,.38-.2h.01s.39-.25,.39-.25l.06-.04,.33-.19,.13-.07,.25-.16,.2-.14,.18-.1c1.39-.89,2.73-1.84,4.03-2.86,2.42-1.94,4.63-4.12,6.61-6.51h.01s.29-.37,.29-.37l.04-.04,.25-.32,.08-.09,.21-.3,.11-.14,.16-.22,.15-.21,.13-.15,.2-.28,.08-.1,.53-.75h.01c4.89-7.08,7.78-15.61,7.9-24.83v-1.69s-.02-.38-.02-.38v-.2s-.01-.19-.01-.19v-.38s-.01-.01-.01-.01l-.04-.56v-.19s-.04-.36-.04-.36v-.02l-.04-.4v-.15s-.02-.22-.02-.22c-.05-.48-.1-.98-.16-1.46v-.04c-1.28-10.02-5.89-19-12.67-25.8-8.06-8.05-19.2-13.04-31.51-13.04s-23.45,4.99-31.5,13.04c-7.18,7.17-11.91,16.8-12.86,27.52m-14.94-.51c1.09-14.62,7.48-27.76,17.25-37.53l.02-.02c1.66-1.64,3.41-3.2,5.24-4.66-1.43-10.2-6.33-19.31-13.47-26.08-7.97-7.56-18.76-12.2-30.64-12.2s-23.44,4.99-31.5,13.03c-8.05,8.06-13.04,19.2-13.04,31.52s4.99,23.42,13.04,31.5c8.06,8.06,19.19,13.02,31.5,13.02h.22c4.51-.01,8.78-.67,12.77-1.87,2.95-.9,5.78-2.1,8.44-3.58l.03-.44v-.46s.01-.02,.01-.02v-.42s.02-.32,.02-.32v-.11s.04-.44,.04-.44l.02-.44,.04-.44Zm10.56,51.41c.68-.2,1.37-.36,2.06-.53h.01l.68-.17h.01l.7-.14,1.4-.3,1.42-.26,.72-.11,.71-.12,1.44-.2,.72-.09c-.68-.59-1.35-1.19-2-1.82l-.05-.06c-.73-.67-1.44-1.38-2.14-2.13l-.08-.09c-.46-.47-.9-.95-1.33-1.43l-.05-.06-.28-.3-.19-.23-.13-.15-.64-.75-.15-.19-.15-.19c-4.48-5.48-8-11.76-10.3-18.58H52.54c-14.44,0-27.58,5.91-37.1,15.44C5.91,173.51,0,186.65,0,201.07v49.89c10.87,3.49,22.06,6.33,33.5,8.42,10.58,1.93,21.42,3.26,32.46,3.94v-21.79c0-18.55,7.59-35.43,19.81-47.66l.49-.48,.51-.48,.51-.47,.51-.48,.51-.46,.52-.49,.52-.44,.53-.44,.53-.46,.53-.42h.01l.53-.44,.54-.43,.56-.44,.55-.41,.57-.4,.56-.42,.57-.41h0s.57-.4,.57-.4l.58-.38,.58-.38,.58-.4h0s.58-.37,.58-.37l.59-.36,.59-.38h.01l1.14-.66,.05-.02h.01l.61-.36h0s.61-.33,.61-.33l.62-.33,.61-.33h.01l.62-.3,.62-.32h.01l.62-.31,.63-.3h.01l1.28-.58,.64-.3,1.29-.54,.66-.23,.66-.27,.66-.23,.67-.26,1.34-.46,.67-.21,1.35-.43h.01l.67-.19h.01l.67-.2h.01Zm105.1-27.89c-2.37,6.98-6,13.4-10.62,18.95l-.3,.36h-.01s-.33,.4-.33,.4l-.13,.15-.19,.23-.28,.3-.05,.06-.33,.37-.1,.1-.48,.52-.08,.1-.34,.35-.08,.09-.27,.28-.23,.22-.1,.12-.35,.35-.05,.04v.02s-.08,.06-.08,.06l-.04,.05-.05,.05-.05,.05-.05,.05-.02,.04h-.01s-.05,.06-.05,.06l-.05,.04-.05,.05-.05,.04-.04,.05-.1,.1-.05,.05-.05,.05-.14,.15-.05,.04-.05,.05h-.01s-.04,.04-.04,.04l-.05,.04-.05,.05-.04,.06-.05,.04-.05,.05-.05,.06-.02,.02h-.03s-.05,.06-.05,.06l-.05,.05-.05,.04-.05,.04-.05,.05-.04,.04-.05,.05h0s-.05,.05-.05,.05l-.04,.02-.06,.05-.05,.06-.05,.04-.05,.05-.05,.04-.02,.04v.02s-.08,.04-.08,.04l-.05,.05-.04,.04-.06,.05-.04,.04-.06,.04-.02,.02-.03,.02-.04,.05-.06,.05-.04,.04-.06,.04-.05,.06-.05,.05-.04,.04,.71,.09,.72,.09,.72,.11,.72,.12,.71,.11,.71,.12,.71,.14,.71,.15,.7,.15,.7,.14,.71,.17,.68,.17,.7,.16,.68,.2,.7,.2,.68,.19,.68,.22,.67,.21,.67,.21h.01l.67,.23,.66,.22,.66,.26h.01l.66,.23,.66,.27,.66,.23,.65,.28,.64,.26,.65,.3,.65,.28,.65,.3,.63,.3,.63,.31,.62,.32,.63,.3,.62,.33,.61,.33,.61,.32,.62,.37,.59,.33,.61,.35,.6,.38,.59,.36,.58,.36h0s.58,.41,.58,.41l.58,.38,.58,.38,.57,.38,.57,.42,.56,.42,.56,.4h.01l.54,.41,.56,.44,.54,.43,.54,.44,.53,.42,.53,.46,.52,.44,.53,.44,.52,.49,.51,.46,.51,.48h.01l.49,.47,.51,.48,.49,.48c12.21,12.24,19.81,29.11,19.81,47.66v21.55c10.33-.82,20.51-2.16,30.43-4.05,10.82-2.06,21.39-4.75,31.67-8.06v-49.89c0-14.43-5.9-27.57-15.43-37.08-9.52-9.53-22.66-15.44-37.09-15.44h-51.69Zm-23.01-68.26c3.11,2.11,6.03,4.54,8.68,7.18v.02c9.66,9.63,16.01,22.58,17.23,36.95l.04,.51,.04,.51,.03,.23v.27l.04,.51,.03,.51v.23s.02,.78,.02,.78v.49s.03,.27,.03,.27v1.27c2.04,.87,4.18,1.61,6.37,2.19,3.46,.89,7.15,1.36,11.02,1.37h.18c12.32,0,23.44-4.96,31.51-13.02,8.05-8.07,13.02-19.21,13.02-31.5s-4.97-23.46-13.02-31.52c-8.06-8.03-19.19-13.03-31.51-13.03-11.53,0-22.02,4.39-29.92,11.53-6.92,6.29-11.87,14.72-13.77,24.23m50.19,198.51v-37.27c0-14.45-5.91-27.58-15.43-37.11-9.53-9.52-22.66-15.44-37.1-15.44h-62.01c-14.43,0-27.57,5.92-37.1,15.44-9.52,9.53-15.43,22.66-15.43,37.11v49.88c12.34,3.97,25.14,7.07,38.29,9.25,14.56,2.39,29.68,3.66,45.25,3.66s30.67-1.27,45.24-3.66c13.15-2.18,25.95-5.28,38.29-9.25v-12.61Z"/>
+              </svg>
+              <span>Quiénes Somos</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  `}function n(){return`
+   <nav class="bg-white shadow-sm">
+  <div class="contenedor container flex flex-wrap justify-between items-center mx-auto">
+    <!-- LOGO -->
+    <a href="#">
+      <img class="h-25 sm:h-35" src="/log-v.png" alt="Logo">
+    </a>
+
+    <!-- BLOQUE ICONOS Y CONTACTO -->
+    <div class="flex flex-wrap gap-3 justify-end items-center">
+      <!-- Email -->
+      <div class="flex items-center py-0.5 px-3 rounded-full border" style="color: #aa252e">
+        <i class=" bi bi-envelope-fill" style="color: #aa252e"></i>
+        <div class="leading-tight hidden sm:block ml-2">
+          <small class="block " style="color: #aa252e">Email</small>
+          <span class="font-bold text-gray-800">ventas@sakuraexpedition.com</span>
+        </div>
+      </div>
+
+      <!-- WhatsApp -->
+      <div class="flex items-center py-0.5 px-3 rounded-full border " style="color: #aa252e">
+        <i class=" bi bi-whatsapp" style="color: #aa252e"></i>
+        <div class="leading-tight hidden sm:block ml-2">
+          <small class="block " style="color: #aa252e">Ventas y Cotizaciones (+51)</small>
+          <span class="font-bold text-gray-800">941 411 418 / 980 532 600</span>
+        </div>
+      </div>
+
+      <!-- Teléfono solo en móvil -->
+      <div class="flex items-center py-0.5 px-3 rounded-full border  sm:hidden" style="color: #aa252e;">
+        <i class=" bi bi-telephone-fill" style="color: #aa252e";></i>
+      </div>
+
+      <!-- Social Icons (solo en pantallas grandes) -->
+      <div class="hidden sm:flex gap-2 items-center text-xl " style="color: #aa252e">
+        <a href="#"><i class="bi bi-tripadvisor"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-tiktok"></i></a>
+      </div>
+
+      <!-- Language -->
+      <div class="hidden sm:flex items-center">
+        <img src="https://flagcdn.com/es.svg" width="24" height="16" class="mr-1" alt="Español">
+        <span class="font-bold">ES <i class="bi bi-caret-down-fill"></i></span>
+      </div>
+
+      <!-- Book Now Button -->
+      <a href="#" class="hidden sm:flex items-center py-1.5 px-4 font-bold text-white rounded-full hover:bg-yellow-500" style="background-color: #e27e08; margin-right: 20px;">
+        BOOK NOW <i class="ml-2 bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+
+  `}function c(){return`
+        <nav class="w-full mx-auto shadow-lg  p-4" style="background: #aa252e">
+            <!-- Main container for the toggle button and navigation links -->
+            <!-- On small screens, the button aligns to the right (justify-end). -->
+            <!-- On large screens (lg), the menu centers (lg:justify-center). -->
+            <div class="flex flex-wrap items-center justify-end lg:justify-center">
+                <!-- Toggle button for small screens (hidden on lg and above) -->
+                <!-- Added id="navbar-toggler" for easier JavaScript selection -->
+                <button id="navbar-toggler" class="lg:hidden px-3 py-2 text-white hover:text-primary-light focus:outline-none focus:ring-2 focus:ring-primary-light rounded-lg" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <!-- Navigation links -->
+                <!-- By default, it's hidden on small screens and becomes a flex container on large screens. -->
+                <!-- The JavaScript will toggle the 'hidden' class for mobile view. -->
+                <div class="hidden lg:flex lg:w-auto w-full" id="navbarNav">
+                    <ul class="flex flex-col lg:flex-row lg:space-x-2 mt-4 lg:mt-0 lg:justify-center w-full">
+                        <li class="group nav-item">
+                            <a class="relative block py-3 px-5 text-white text-sm font-medium rounded-lg no-underline transition-all duration-300 ease-in-out
+                                      hover:text-primary hover:-translate-y-1 hover:bg-primary-light
+                                      aria-[current=page]:text-primary aria-[current=page]:font-semibold aria-[current=page]:bg-primary-light"
+                               aria-current="page" href="#">
+                                Camino Inca y Salkantay trek
+                                <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 transition-transform duration-300 ease-in-out origin-center group-hover:scale-x-100 group-[aria-current=page]:scale-x-100"></span>
+                            </a>
+                        </li>
+                        <li class="group nav-item">
+                            <a class="relative block py-3 px-5 text-white text-sm font-medium rounded-lg no-underline transition-all duration-300 ease-in-out
+                                      hover:text-primary hover:-translate-y-1 hover:bg-primary-light"
+                               href="#">
+                                Machu Picchu por Tren
+                                <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 transition-transform duration-300 ease-in-out origin-center group-hover:scale-x-100"></span>
+                            </a>
+                        </li>
+                        <li class="group nav-item">
+                            <a class="relative block py-3 px-5 text-white text-sm font-medium rounded-lg no-underline transition-all duration-300 ease-in-out
+                                      hover:text-primary hover:-translate-y-1 hover:bg-primary-light"
+                               href="#">
+                                Caminatas de 1 Día
+                                <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 transition-transform duration-300 ease-in-out origin-center group-hover:scale-x-100"></span>
+                            </a>
+                        </li>
+                        <li class="group nav-item">
+                            <a class="relative block py-3 px-5 text-white text-sm font-medium rounded-lg no-underline transition-all duration-300 ease-in-out
+                                      hover:text-primary hover:-translate-y-1 hover:bg-primary-light"
+                               href="#">
+                                Paquetes Perú
+                                <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 transition-transform duration-300 ease-in-out origin-center group-hover:scale-x-100"></span>
+                            </a>
+                        </li>
+                        <li class="group nav-item">
+                            <a class="relative block py-3 px-5 text-white text-sm font-medium rounded-lg no-underline transition-all duration-300 ease-in-out
+                                      hover:text-primary hover:-translate-y-1 hover:bg-primary-light"
+                               href="#">
+                                Top Tours Perú
+                                <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 transition-transform duration-300 ease-in-out origin-center group-hover:scale-x-100"></span>
+                            </a>
+                        </li>
+                        <li class="group nav-item">
+                            <a class="relative block py-3 px-5 text-white text-sm font-medium rounded-lg no-underline transition-all duration-300 ease-in-out
+                                      hover:text-primary hover:-translate-y-1 hover:bg-primary-light"
+                               href="#">
+                                Tours Cusco
+                                <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 transition-transform duration-300 ease-in-out origin-center group-hover:scale-x-100"></span>
+                            </a>
+                        </li>
+                        <li class="group nav-item">
+                            <a class="relative block py-3 px-5 text-white text-sm font-medium rounded-lg no-underline transition-all duration-300 ease-in-out
+                                      hover:text-primary hover:-translate-y-1 hover:bg-primary-light"
+                               href="#">
+                                Tour Selva Amazónica
+                                <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 transition-transform duration-300 ease-in-out origin-center group-hover:scale-x-100"></span>
+                            </a>
+                        </li>
+                        <li class="group nav-item">
+                            <a class="relative block py-3 px-5 text-white text-sm font-medium rounded-lg no-underline transition-all duration-300 ease-in-out
+                                      hover:text-primary hover:-translate-y-1 hover:bg-primary-light"
+                               href="#">
+                                Destinos Perú
+                                <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 transition-transform duration-300 ease-in-out origin-center group-hover:scale-x-100"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    `}function d(){const e=document.getElementById("navbar-toggler"),a=document.getElementById("navbarNav");e&&a&&e.addEventListener("click",function(){a.classList.toggle("hidden");const t=!a.classList.contains("hidden");this.setAttribute("aria-expanded",t)})}function u(){return`
+    <div class="w-full h-[65vh] flex items-center justify-center bg-cover bg-center  shadow-lg z-0 "
+         style="background-image: url('./../public/machu-picchu.jpg');">
+        
+    </div>
+    `}function p(){return`
+       <div class="w-11/12 max-w-4xl mx-auto rounded-xl p-5 shadow-xl relative z-10 mt-[-70px]"
+         style="animation: fadeInDown 0.7s ease-out forwards; background-color: #aa252e;">
+       
+        <div class="mb-3 flex items-center">
+            
+            <svg class="w-6 h-6 lg:w-8 lg:h-8 text-white mr-2 transition-transform duration-200 hover:scale-110" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+            </svg>
+            <span class="text-white font-bold text-base">¿A dónde quieres ir?</span>
+        </div>
+
+        
+        <div class="bg-white rounded-full px-4 flex items-center h-14 shadow-inner">
+            
+            <input type="text" class="flex-grow border-none focus:outline-none text-gray-800 font-bold placeholder-gray-500 placeholder-custom"
+                   placeholder="Busca el tour que quieres">
+
+            
+            <div class="h-8 w-px mx-4" style="background: linear-gradient(to bottom, #f4a300 50%, #b91d1d 50%);"></div>
+
+            
+            <select class="border-none bg-white text-gray-700 w-full lg:w-64 focus:outline-none focus:ring-2 focus:ring-primary-light rounded-md custom-select-arrow">
+                <option selected disabled>Selecciona la categoría</option>
+                <option value="aventura">Aventura</option>
+                <option value="cultural">Cultural</option>
+                <option value="gastronomia">Gastronomía</option>
+            </select>
+
+            
+            <div class="h-8 w-px mx-4" style="background: linear-gradient(to bottom, #f4a300 50%, #b91d1d 50%);"></div>
+
+            
+            <button class="bg-transparent border-none text-primary text-2xl w-12 h-12 flex items-center justify-center rounded-full
+                           transition-colors duration-200 hover:text-[#a30012] hover:bg-primary-light">
+                <!-- Icono de lupa en línea SVG -->
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    `}function m(){return`
+        <section class="container mx-auto px-4 py-12 m-5 bg-white rounded-xl shadow-lg
+                    animate-fade-in-up" style="animation: fadeInUp 0.7s ease-out forwards;">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <!-- Columna de texto -->
+            <div class="lg:col-span-1">
+                <!-- Logo de Sakura -->
+                <!-- Se ha ajustado para centrar el logo siempre. -->
+                <div class="mb-6 flex items-center justify-center">
+                    <img src="/log-h.png" alt="Logo Sakura" class="w-full max-w-xs h-auto rounded-xl shadow-md">
+                </div>
+                <p class="text-gray-700 text-base leading-relaxed mb-4 text-justify">
+                    Agencia de viajes auténtica y profesional 100% local, con un equipo profesional de trabajadores cusqueños apasionados por su cultura e historia y trabajando de la mano con las comunidades de bajos recursos económicos, organizamos todo tipo de servicios turísticos en la ciudad de Cusco, desde viajes clásicos, tradicionales, aventura, caminatas, como:
+                    <span class="font-bold " style="color:#e27e08">Camino Inca</span>,
+                    <span class="font-bold " style="color:#004351">Machu Picchu tour por tren</span>,
+                    <span class="font-bold " style="color:#004351">con excursiones de un día, como Montaña de Colores o Montaña de 7 colores, Valle Sagrado de los incas, Laguna Humantay, Pallaypuncho Caminata 1 día, Palcoyo Montaña, Waqrapukara un día</span>.
+                    También hemos preparado programas de 4 días y 7 días cubriendo Norte, Sur y centro del Perú, Ica, Lago Titicaca, Cañón del Colca y más con los mejores destinos que no debes dejar de visitar, elige el de tu preferencia.
+                </p>
+                <p class="text-gray-700 text-base leading-relaxed mb-4 text-justify">
+                    Somos Operadores directos de los tours en Cusco con un servicio de calidad y personalizado. Esto nos convierte en una de las empresas mejor calificadas en la ciudad de Cusco nuestros clientes hablan por nosotros en
+                    <span class="font-bold " style="color: #e27e08">TripAdvisor</span>, y otras redes sociales.
+                </p>
+            </div>
+
+            <!-- Columna de imágenes -->
+            <div class="lg:col-span-1 flex flex-col md:flex-row gap-4">
+                <!-- Foto principal del equipo -->
+                <div class="w-full md:w-1/2">
+                    <img src="/n-1.jpg" alt="Equipo de Sakura" class="w-full h-auto object-cover rounded-xl shadow-md transition-transform duration-300 hover:scale-105">
+                </div>
+                <!-- Dos imágenes laterales apiladas -->
+                <div class="w-full md:w-1/2 flex flex-col gap-4">
+                    <img src="/l-1.jpg" alt="Cusco" class="w-full h-auto object-cover rounded-xl shadow-md transition-transform duration-300 hover:scale-105">
+                    <img src="/l-2.jpg" alt="Machu Picchu" class="w-full h-auto object-cover rounded-xl shadow-md transition-transform duration-300 hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </section>
+    `}const h=[{image:"/card1.jpg",alt:"Machu Picchu",ribbon:"% -50 % OFF",days:"7 Días",title:"MACHU PICCHU MÁGICO",location:"Cusco, Valle Sagrado, Machu Picchu",description:"Explora la maravilla del mundo, Machu Picchu, y los impresionantes paisajes del Valle Sagrado.",includes:["camera","binoculars","train-front","h-square","bus-front","person"],difficulty:2,rating:4,totalReviews:30,price:899,oldPrice:1798},{image:"/card2.jpg",alt:"Lima Colonial",days:"3 Días",title:"ENCANTO COLONIAL DE LIMA",location:"Lima, Centro Histórico, Miraflores",description:"Descubre la rica historia y la vibrante cultura de la capital peruana.",includes:["camera","binoculars","bus-front","person"],difficulty:1,rating:5,totalReviews:20,price:250,oldPrice:357},{image:"/card3.jpg",alt:"Lago Titicaca",days:"2 Días",title:"MISTERIOS DEL LAGO TITICACA",location:"Puno, Islas Uros, Taquile",description:"Navega por el lago navegable más alto del mundo y conoce las culturas de las islas flotantes.",includes:["camera","binoculars","h-square","person"],difficulty:3,rating:4,totalReviews:15,price:399,oldPrice:665}];function g(e){return{camera:"Cámara",binoculars:"Binoculares","train-front":"Tren","h-square":"Hotel","bus-front":"Bus",person:"Guía",airplane:"Avión",utensils:"Comida",ship:"Bote"}[e]||e}function v(e){let a="";for(let t=0;t<5;t++)a+=t<e?'<i class="bi bi-circle-fill" style="color:#004351"></i>':'<i class="bi bi-circle text-gray-400"></i>';return a}function f(e){let a="";for(let t=0;t<5;t++)a+=t<e?'<i class="bi bi-star-fill text-yellow-500"></i>':'<i class="bi bi-star text-gray-400"></i>';return a}function x(e,a){const t=a===0,l=t&&e.ribbon?e.ribbon.match(/-(\d+)\s*%/)?.[1]:null;return`
+        <div class="mb-4 animate-slideInUp">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden card-tour h-full flex flex-col">
+                <div class="relative">
+                    <img src="${e.image}" class="w-full h-60 object-cover" alt="${e.alt}">
+                    ${t&&l?`<span class="discount-badge">${l}% OFF</span>`:""}
+                    <span class="days-badge"><i class="bi bi-calendar-week-fill mr-2"></i> ${e.days}</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h5 class="text-2xl font-bold mb-2" style="color:#004351">${e.title}</h5>
+                    <p class="text-sm mb-2" style="color:#e27e08"><i class="bi bi-geo-alt-fill mr-1"></i> ${e.location}</p>
+                    <p class="text-gray-600 text-sm mb-4">${e.description}</p>
+                    <hr class="border-gray-200 my-4">
+                    <p class="mb-2 text-gray-700"><strong>Incluye:</strong>
+                        ${e.includes.map(s=>`<i class="bi bi-${s} mr-1" style="color:#004351" title="${g(s)}"></i>`).join("")}
+                    </p>
+                    <p class="mb-2 text-gray-700"><strong>Nivel de Dificultad:</strong><br>
+                        <span class="flex gap-1">${v(e.difficulty)}</span>
+                    </p>
+                    <p class="mb-4 text-gray-700"><strong>Calificación:</strong><br>
+                        <span class="flex gap-1">${f(e.rating)}</span>
+                    </p>
+                    <div class="flex justify-end items-center mt-auto">
+                        <div class="text-right price-display">
+                            <span class="block font-bold text-sm">Desde USD <br> 
+                                <span class="text-3xl font-extrabold">$${e.price}</span></span>
+                            <small class="line-through">antes $${e.oldPrice}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `}function b(){return`
+        <section class="container mx-auto py-8 px-4">
+            <h2 class="text-center text-4xl font-extrabold mb-8 animate-fadeIn" style="color:#aa252e">Promociones y Ofertas</h2>
+            <div class="mx-auto divider"></div>
+            <div class="my-6 text-center text-lg space-x-4 animate-fadeIn">
+                <span class="pb-1 border-b-4 font-bold text-blue-600 border-yellow-500 hover:text-blue-800 transition duration-300">
+                    <a href="#" class="destinos">Cusco</a>
+                </span>
+                <span>|</span><a href="#" class="destinos text-gray-700 hover:text-blue-600 transition duration-300">Lima</a>
+                <span>|</span><a href="#" class="destinos text-gray-700 hover:text-blue-600 transition duration-300">Puno</a>
+                <span>|</span><a href="#" class="destinos text-gray-700 hover:text-blue-600 transition duration-300">Arequipa</a>
+                <span>|</span><a href="#" class="destinos text-gray-700 hover:text-blue-600 transition duration-300">Selva</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="cards-container"></div>
+        </section>
+    `}function y(){const e=document.getElementById("cards-container");e&&(e.innerHTML=h.map((a,t)=>x(a,t)).join(""))}function w(){return b()}function C(){y()}document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector("#app");e?(e.innerHTML=r()+n()+c()+u()+p()+m()+w(),d(),C()):console.log("El elemento con ID 'app' no fue encontrado en el DOM")});
