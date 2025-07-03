@@ -1,0 +1,9 @@
+.divider4 {
+  width: 30%;
+  height: 3px;
+  background: linear-gradient(to right, #004351 33.33%, #e27208 33.33% 66.66%, #aa252e 66.66% 100%);
+  margin: -10px auto 20px;
+  animation: dividerAnimation 1s ease-out forwards;
+  opacity: 0;
+  transform: scaleX(0);
+}

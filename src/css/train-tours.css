@@ -1,0 +1,30 @@
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+        
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+    animation: fadeIn 1.5s ease-out forwards;
+}
+.divider2 {
+  width: 70%;
+  height: 3px;
+  background: linear-gradient(to right, #004351 33.33%, #e27208 33.33% 66.66%, #aa252e 66.66% 100%);
+  margin: -10px auto 20px;
+  animation: dividerAnimation 1s ease-out forwards;
+  opacity: 0;
+  transform: scaleX(0);
+}

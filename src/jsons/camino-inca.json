@@ -1,0 +1,20 @@
+[
+    {
+        "image": "/cam1.jpg",
+        "alt": "Camino Inca a Machu Picchu por tren Privado",
+        "title": "Camino Inca a Machu Picchu por tren Privado",
+        "price": 899
+    },
+    {
+        "image": "/cam2.jpg",
+        "alt": "Valle VIP + Camino Inca a Machu Picchu",
+        "title": "Valle VIP + Camino Inca a Machu Picchu<br>1 día",
+        "price": 899
+    },
+    {
+        "image": "/cam3.jpg",
+        "alt": "Camino Inca a Machu Picchu Express",
+        "title": "Camino Inca a Machu Picchu Express 1 día",
+        "price": 899
+    }
+]
