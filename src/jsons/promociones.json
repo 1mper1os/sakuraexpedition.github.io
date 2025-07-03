@@ -1,0 +1,45 @@
+[
+  {
+    "image": "/card1.jpg",
+    "alt": "Machu Picchu",
+    "ribbon": "% -50 % OFF",
+    "days": "7 Días",
+    "title": "MACHU PICCHU MÁGICO",
+    "location": "Cusco, Valle Sagrado, Machu Picchu",
+    "description": "Explora la maravilla del mundo, Machu Picchu, y los impresionantes paisajes del Valle Sagrado.",
+    "includes": ["camera", "binoculars", "train-front", "h-square", "bus-front", "person"],
+    "difficulty": 2,
+    "rating": 4,
+    "totalReviews": 30,
+    "price": 899,
+    "oldPrice": 1798
+  },
+  {
+    "image": "/card2.jpg",
+    "alt": "Lima Colonial",
+    "days": "3 Días",
+    "title": "ENCANTO COLONIAL DE LIMA",
+    "location": "Lima, Centro Histórico, Miraflores",
+    "description": "Descubre la rica historia y la vibrante cultura de la capital peruana.",
+    "includes": ["camera", "binoculars", "bus-front", "person"],
+    "difficulty": 1,
+    "rating": 5,
+    "totalReviews": 20,
+    "price": 250,
+    "oldPrice": 357
+  },
+  {
+    "image": "/card3.jpg",
+    "alt": "Lago Titicaca",
+    "days": "2 Días",
+    "title": "MISTERIOS DEL LAGO TITICACA",
+    "location": "Puno, Islas Uros, Taquile",
+    "description": "Navega por el lago navegable más alto del mundo y conoce las culturas de las islas flotantes.",
+    "includes": ["camera", "binoculars", "h-square", "person"],
+    "difficulty": 3,
+    "rating": 4,
+    "totalReviews": 15,
+    "price": 399,
+    "oldPrice": 665
+  }
+]

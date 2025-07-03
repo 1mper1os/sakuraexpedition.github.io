@@ -3,6 +3,7 @@
   overflow: hidden;         /* Oculta cualquier parte del logo que se salga */
   display: flex;
   align-items: center;
+  margin-right: 20px;
   
   .iconten{
     height: 130px;
