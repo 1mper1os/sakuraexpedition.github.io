@@ -1,0 +1,104 @@
+.tour-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.tour-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.tour-card-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.tour-card-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 2;
+}
+.tour-card-content {
+  position: relative;
+  z-index: 3;
+  padding: 1.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+.tour-description-hidden {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+.tour-card:hover .tour-description-hidden {
+  max-height: 150px;
+  opacity: 1;
+  margin-top: -1rem;
+}
+.read-more-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 5rem;
+  background-color: #e27e08;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 0.5rem;
+  width: fit-content;
+  margin-left: 10%;
+}
+.read-more-button:hover {
+  background-color: #ea580c;
+  transform: translateY(-2px);
+}
+.read-more-button svg {
+  margin-left: 0;
+  opacity: 0;
+  transition: margin-left 0.2s, opacity 0.2s;
+}
+.read-more-button:hover svg {
+  margin-left: 0.5rem;
+  opacity: 1;
+}
+.tour-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.divider5 {
+  width: 30%;
+  height: 3px;
+  background: linear-gradient(to right, #004351 33.33%, #e27208 33.33% 66.66%, #aa252e 66.66% 100%);
+  margin: 10px auto 20px;
+  animation: dividerAnimation 1s ease-out forwards;
+  opacity: 0;
+  transform: scaleX(0);
+}

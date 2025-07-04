@@ -1,0 +1,89 @@
+{
+    "tripadvisor": [
+        {
+            "name": "imaaronmatthew",
+            "time": "2 months ago",
+            "text": "We booked the 4 day Inca Trail tour. Great service! The guides were knowledgeable and the scenery was breathtaking. Highly recommend Sakura Expedition for an unforgettable adventure. The food provided was also top-notch, catering to all dietary needs. Truly a five-star experience!",
+            "source": "TripAdvisor",
+            "profileImage": "https://i.ibb.co/Ld1XpXy/profile-placeholder-male.jpg",
+            "logo": "tripAdvisorSVG",
+            "reviewTitle": "Amazing Inca Trail Experience"
+        },
+        {
+            "name": "Tomer Nahum",
+            "time": "3 months ago",
+            "text": "Exceeded expectations on the Machu Picchu tour. Everything was perfectly organized from start to finish. Our guide was fantastic and made the history come alive. Even the logistics like transportation and permits were handled flawlessly, making it a stress-free journey.",
+            "source": "TripAdvisor",
+            "profileImage": "https://i.ibb.co/k516pQ4/profile-placeholder-female.jpg",
+            "logo": "tripAdvisorSVG",
+            "reviewTitle": "Machu Picchu Tour Beyond Expectations"
+        },
+        {
+            "name": "C & D Stow",
+            "time": "5 months ago",
+            "text": "Amazing experience. Highly recommended! The team at Sakura Expedition went above and beyond to ensure we had a safe and enjoyable trip. Truly professional and attentive to every detail, from the booking process to the final farewell.",
+            "source": "TripAdvisor",
+            "profileImage": "https://i.ibb.co/Ld1XpXy/profile-placeholder-male.jpg",
+            "logo": "tripAdvisorSVG",
+            "reviewTitle": "Highly Recommended for Peru!"
+        }
+    ],
+    "google": [
+        {
+            "name": "Valentina Woods",
+            "time": "4 months ago",
+            "text": "Amazing trip, found them at the last minute and they saved my trip. Very flexible and accommodating, even with last-minute changes. Thank you for making our dreams come true!",
+            "source": "Google",
+            "profileImage": "https://i.ibb.co/k516pQ4/profile-placeholder-female.jpg",
+            "logo": "googleLogoSVG",
+            "reviewTitle": "Last Minute Trip Saver!"
+        },
+        {
+            "name": "Marco Ruiz",
+            "time": "1 month ago",
+            "text": "Super organized and fun tour. Would do it again. The itinerary was well-planned, and every detail was taken care of. A stress-free vacation that I will cherish forever.",
+            "source": "Google",
+            "profileImage": "https://i.ibb.co/Ld1XpXy/profile-placeholder-male.jpg",
+            "logo": "googleLogoSVG",
+            "reviewTitle": "Perfectly Organized and Fun"
+        },
+        {
+            "name": "Julia P.",
+            "time": "6 months ago",
+            "text": "Incredible service and friendly guides! They truly made our family trip special. Always attentive and ready to help with a smile. My kids still talk about the adventures they had.",
+            "source": "Google",
+            "profileImage": "https://i.ibb.co/k516pQ4/profile-placeholder-female.jpg",
+            "logo": "googleLogoSVG",
+            "reviewTitle": "Friendly Guides, Special Trip"
+        }
+    ],
+    "facebook": [
+        {
+            "name": "Luis F.",
+            "time": "2 weeks ago",
+            "text": "Best decision ever to book with them through Facebook! Their customer service was prompt and helpful. Made planning so easy and answered all our questions efficiently.",
+            "source": "Facebook",
+            "profileImage": "https://i.ibb.co/Ld1XpXy/profile-placeholder-male.jpg",
+            "logo": "facebookSVG",
+            "reviewTitle": "Easy Booking via Facebook"
+        },
+        {
+            "name": "Natalie M.",
+            "time": "3 weeks ago",
+            "text": "Excellent support and wonderful people. They truly care about their clients and go the extra mile. Highly recommend for any travel needs. Their dedication is truly inspiring.",
+            "source": "Facebook",
+            "profileImage": "https://i.ibb.co/k516pQ4/profile-placeholder-female.jpg",
+            "logo": "facebookSVG",
+            "reviewTitle": "Wonderful People, Great Support"
+        },
+        {
+            "name": "Carlos D.",
+            "time": "1 month ago",
+            "text": "Recommended 100%! Great for families too. Our kids loved the activities, and the guides were patient and engaging with everyone. Even the smallest details were taken care of, which made a huge difference.",
+            "source": "Facebook",
+            "profileImage": "https://i.ibb.co/Ld1XpXy/profile-placeholder-male.jpg",
+            "logo": "facebookSVG",
+            "reviewTitle": "Family-Friendly and Highly Recommended"
+        }
+    ]
+}

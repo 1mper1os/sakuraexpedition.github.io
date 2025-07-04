@@ -1,0 +1,43 @@
+[
+  {
+    "location": "Aprende y Descubre",
+    "title": "Inmersión Cultural Andina",
+    "price": "Desde US$120",
+    "image": "/card1.jpg",
+    "badge": "Cultural",
+    "badgeClass": "bg-[#004351]",
+    "description": "Sumérgete en las tradiciones milenarias, la historia viva y las costumbres auténticas de las comunidades andinas. Un viaje que enriquece el alma.",
+    "icon": "book"
+  },
+  {
+    "location": "Adrenalina Pura",
+    "title": "Aventura Extrema en los Andes",
+    "price": "Desde US$95",
+    "image": "/card2.jpg",
+    "badge": "Aventura",
+    "badgeClass": "bg-[#004351]",
+    "description": "Desafía tus límites con emocionantes actividades como trekking, rafting o escalada en paisajes montañosos impresionantes. ¡La aventura te espera!",
+    "icon": "mountain"
+  },
+  {
+    "location": "Sabores del Perú",
+    "title": "Experiencia Culinaria Andina",
+    "price": "Desde US$70",
+    "image": "/card3.jpg",
+    "badge": "Gastronómico",
+    "badgeClass": "bg-[#004351]",
+    "description": "Explora la diversidad de la cocina peruana, desde platos tradicionales hasta fusiones innovadoras. Un festín para tus sentidos.",
+    "icon": "chef-hat"
+  },
+  {
+    "location": "Exclusividad y Confort",
+    "title": "Retiro de Lujo en la Naturaleza",
+    "price": "Desde US$300",
+    "image": "/card1.jpg",
+    "badge": "Lujoso",
+    "badgeClass": "bg-[#004351]",
+    "description": "Disfruta de alojamientos de primera clase, servicios personalizados y experiencias exclusivas diseñadas para tu máximo confort y relajación.",
+    "icon": "gem"
+  }
+]
+    

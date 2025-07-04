@@ -10,6 +10,10 @@ import { promociones, initPromociones } from "./components/promociones.js";
 import {getTrainToursHTML, initTrainTours} from "./components/tours-machupicchu.js";
 import { getCaminoIncaHTML, initCaminoInca  } from "./components/camino-inca.js";
 import { getSalkantayHTML, initSalkantay } from "./components/salkantay.js";
+import { getTiposToursHTML, initTiposTours } from "./components/tipostours.js";
+import { getReviewsHTML, initReviews } from "./components/reviews.js";
+import { contacto } from "./components/contacto.js";
+import { blogs } from "./components/blogs.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const appDiv = document.querySelector("#app");
@@ -25,7 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
       promociones() +
       getTrainToursHTML() +
       getCaminoIncaHTML() +
-      getSalkantayHTML();
+      getSalkantayHTML() +
+      getTiposToursHTML() +
+      getReviewsHTML() +
+      contacto() +
+      blogs();
 
 
     initHeaderListeners();
@@ -33,6 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
     initTrainTours(); 
     initCaminoInca();
     initSalkantay();
+    initTiposTours();
+    initReviews();
   } else {
     console.log("El elemento con ID 'app' no fue encontrado en el DOM");
   }
