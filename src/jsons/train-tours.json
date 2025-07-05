@@ -58,5 +58,17 @@
     "totalReviews": 95,
     "price": 310,
     "durationText": "1 Full Day from"
+  },
+  {
+    "id": 6,
+    "image": "/card2.jpg",
+    "alt": "Tour en tren a Machu Picchu 5",
+    "isFavorite": false,
+    "location": "Urubamba - Machupicchu - Cusco",
+    "title": "Machu Picchu por tren + Waynapicchu",
+    "rating": 4.0,
+    "totalReviews": 95,
+    "price": 310,
+    "durationText": "2 days"
   }
 ]

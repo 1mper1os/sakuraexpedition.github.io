@@ -1,30 +1,221 @@
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
+/* Estilos generales para las tarjetas de tour */
+.tour-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    height: 480px; /* Altura consistente para las tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-shrink: 0; /* Aseguramos que las tarjetas no se encojan en el carrusel */
+    width: 380px; /* Ancho fijo para cada tarjeta */
 }
-.no-scrollbar {
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
+.tour-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.tour-card-image {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.tour-card-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    z-index: 2;
+}
+.tour-card-content {
+    position: relative;
+    z-index: 3;
+    padding: 1.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
 }
 
-        
+/* Estilos para la descripción oculta al pasar el cursor */
+.tour-description-hidden {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+.tour-card:hover .tour-description-hidden {
+    max-height: 150px;
+    opacity: 1;
+    margin-top: -1rem;
+}
+
+/* Estilos para el botón "Leer Más" */
+.read-more-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 5rem;
+    background-color: #e27e08;
+    color: white;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 0.5rem;
+    width: fit-content;
+    margin-left: 10%;
+}
+.read-more-button:hover {
+    background-color: #ea580c;
+    transform: translateY(-2px);
+}
+.read-more-button svg {
+    margin-left: 0;
+    opacity: 0;
+    transition: margin-left 0.2s, opacity 0.2s;
+}
+.read-more-button:hover svg {
+    margin-left: 0.5rem;
+    opacity: 1;
+}
+
+/* Estilos para la insignia (badge) */
+.tour-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el divisor principal */
+.divider2 {
+    width: 55%;
+    height: 3px;
+    background: linear-gradient(to right, #004351 33.33%, #e27208 33.33% 66.66%, #aa252e 66.66% 100%);
+    margin: 10px auto 20px;
+    animation: dividerAnimation 1s ease-out forwards;
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+/* Animaciones */
+@keyframes dividerAnimation {
+    from { opacity: 0; transform: scaleX(0); }
+    to { opacity: 1; transform: scaleX(1); }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
 .animate-fade-in {
     animation: fadeIn 1s ease-out forwards;
 }
-
 .animate-fade-in-delay {
     animation: fadeIn 1.5s ease-out forwards;
 }
-.divider2 {
-  width: 70%;
-  height: 3px;
-  background: linear-gradient(to right, #004351 33.33%, #e27208 33.33% 66.66%, #aa252e 66.66% 100%);
-  margin: -10px auto 20px;
-  animation: dividerAnimation 1s ease-out forwards;
-  opacity: 0;
-  transform: scaleX(0);
+
+/* Estilos para el contenedor del carrusel */
+#train-carousel {
+    display: flex;
+    overflow-x: hidden; /* Oculta la barra de desplazamiento */
+    scroll-behavior: smooth;
+    padding: 0 1rem; /* Margen interno para que las cartas no toquen los bordes */
+    /* El ancho de este contenedor lo controlará su padre para el centrado */
+}
+
+#train-carousel .tour-card {
+    margin-right: 1.5rem; /* Equivalente a space-x-6 */
+}
+
+#train-carousel .tour-card:last-child {
+    margin-right: 0; /* Eliminar el margen del último elemento */
+}
+
+/* Contenedor padre de #train-carousel para centrar */
+.relative.flex.justify-center {
+    /* Calculamos el ancho de 3 tarjetas + 2 gaps + 2 * padding (si los hay) */
+    /* 3 * 380px (ancho de tarjeta) + 2 * 24px (gap) = 1140 + 48 = 1188px */
+    /* Ajustamos si hay padding horizontal en #train-carousel, que es px-8 (2rem = 32px) */
+    max-width: 1220px; /* Ancho deseado para las 3 tarjetas visibles */
+    margin: 0 auto; /* Centrar este contenedor en la página */
+    /* `justify-content: center` ya está aplicado en el HTML, lo cual es clave. */
+}
+
+/* Estilos para los botones de navegación del carrusel */
+.absolute.left-0, .absolute.right-0 {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 3rem;
+    color: #f97316;
+    transition: transform 0.3s, color 0.3s;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 9999px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+}
+.absolute.left-0:hover, .absolute.right-0:hover {
+    color: #ea580c;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 1200px) {
+    .relative.flex.justify-center {
+        max-width: calc(3 * 380px + 2 * 24px); /* Sin padding en el cálculo del max-width si se quita el px de #train-carousel */
+        /* Ajustar según el diseño, quizás 100% menos un margen para los botones */
+    }
+}
+
+@media (max-width: 1023px) { /* Para 2 tarjetas en tablets */
+    .relative.flex.justify-center {
+        max-width: calc(2 * 380px + 1 * 24px);
+    }
+}
+
+@media (max-width: 767px) { /* Para 1 tarjeta en móviles */
+    .relative.flex.justify-center {
+        max-width: 380px; /* Solo una tarjeta + botones */
+    }
+    #train-carousel .tour-card {
+        width: 100%;
+        max-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .read-more-button {
+        width: 80%;
+        margin-left: 10%;
+    }
 }

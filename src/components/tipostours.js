@@ -3,7 +3,7 @@ import "./../css/tipostours.css";
 
 export function getTiposToursHTML() {
   return `
-    <div class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <div class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-9 py-10 md:py-16">
       <h2 class="text-center text-4xl font-extrabold text-[#aa252e] mb-2">Tipos de Tours</h2>
       <div class="mx-auto divider5"></div>
       <div id="ttours-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center"></div>

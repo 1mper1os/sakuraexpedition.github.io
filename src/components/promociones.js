@@ -30,7 +30,7 @@ function generateStarRating(rating) {
     let stars = '';
     for (let i = 0; i < 5; i++) {
         stars += i < rating
-            ? '<i class="bi bi-star-fill text-yellow-500"></i>'
+            ? '<i class="bi bi-star-fill text-[#e27e08]"></i>'
             : '<i class="bi bi-star text-gray-400"></i>';
     }
     return stars;

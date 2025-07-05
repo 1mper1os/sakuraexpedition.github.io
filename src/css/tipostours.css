@@ -94,7 +94,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .divider5 {
-  width: 30%;
+  width: 25%;
   height: 3px;
   background: linear-gradient(to right, #004351 33.33%, #e27208 33.33% 66.66%, #aa252e 66.66% 100%);
   margin: 10px auto 20px;

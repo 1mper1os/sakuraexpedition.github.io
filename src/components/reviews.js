@@ -7,7 +7,7 @@ export function getReviewsHTML() {
   return `
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
       <h2 class="text-center text-4xl font-extrabold text-[#aa252e] mb-2">¿Por qué elegir a Sakura Expedition?</h2>
-      <div class="section-underline"></div>
+      <div class="mx-auto divider6"></div>
 
       <div class="flex flex-wrap justify-center gap-6 my-8">
         <div class="review-source active" data-source="tripadvisor">

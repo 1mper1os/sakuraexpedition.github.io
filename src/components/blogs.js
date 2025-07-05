@@ -8,7 +8,7 @@ export function getBlogsHTML() {
         <div class="mb-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <div class="mx-auto md:mx-0">
             <div class="font-bold text-3xl text-[#003b4f] mb-2">Blogs</div>
-            <div class="divider-gradient mx-auto md:mx-0"></div>
+            <div class="mx-auto divider7"></div>
           </div>
           <button class="bg-white text-gray-800 font-bold shadow-md rounded-full py-2 px-6 transition-all duration-300 hover:bg-gray-100 hover:shadow-lg active:scale-95 mt-6 md:mt-0">
             Explorar todo <span class="ml-2">»</span>
