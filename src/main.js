@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
       buscador() +
       nosotros() +
       promociones() +
-      getTrainToursHTML() +
       getCaminoIncaHTML() +
+      getTrainToursHTML() +
       getSalkantayHTML() +
-      getTiposToursHTML() +
+      //getTiposToursHTML() +
       getReviewsHTML() +
       contacto() +
       blogs();

@@ -1,123 +1,357 @@
-/* Estilos generales para las tarjetas de tour */
+/* Variables CSS para consistencia */
+:root {
+    --color-primary: #004351;
+    --color-secondary: #e27e08;
+    --color-accent: #aa252e;
+    --color-text-light: #6b7280;
+    --color-white: #ffffff;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --border-radius: 1rem;
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* Sección principal */
+.train-tours-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2.5rem 1rem;
+}
+
+/* Header de la sección */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.section-description {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+}
+
+.description-text {
+    color: var(--color-text-light);
+    font-size: 1.125rem;
+    line-height: 1.7;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.highlight-red {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.highlight-orange {
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+
+.highlight-blue {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* Divisor */
+.divider2 {
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(to right, var(--color-primary) 33.33%, var(--color-secondary) 33.33% 66.66%, var(--color-accent) 66.66% 100%);
+    margin: 1rem auto 2rem;
+    animation: dividerAnimation 1s ease-out forwards;
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+/* Contenedor del carrusel */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.train-carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 0 1rem;
+    gap: 1.5rem;
+    touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Tarjetas de tour */
 .tour-card {
     position: relative;
     overflow: hidden;
-    border-radius: 1rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-                0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     cursor: pointer;
-    height: 480px; /* Altura consistente para las tarjetas */
+    height: 480px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    flex-shrink: 0; /* Aseguramos que las tarjetas no se encojan en el carrusel */
-    width: 380px; /* Ancho fijo para cada tarjeta */
+    flex-shrink: 0;
+    background: var(--color-white);
 }
+
 .tour-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--shadow-xl);
 }
+
 .tour-card-image {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: 1;
+    transition: transform var(--transition-slow);
 }
+
+.tour-card:hover .tour-card-image {
+    transform: scale(1.05);
+}
+
 .tour-card-overlay {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     z-index: 2;
 }
+
 .tour-card-content {
     position: relative;
     z-index: 3;
     padding: 1.5rem;
-    color: white;
+    color: var(--color-white);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: 100%;
 }
 
-/* Estilos para la descripción oculta al pasar el cursor */
+.tour-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tour-location {
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin-bottom: 0.25rem;
+    opacity: 0.9;
+}
+
+.tour-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.tour-price {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
+}
+
+/* Badge del tour */
+.tour-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-white);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(10px);
+    background: rgba(0, 67, 81, 0.9);
+}
+
+.badge-text {
+    white-space: nowrap;
+}
+
+/* Descripción oculta */
 .tour-description-hidden {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    transition: max-height var(--transition-slow), opacity var(--transition-slow);
 }
+
 .tour-card:hover .tour-description-hidden {
     max-height: 150px;
     opacity: 1;
-    margin-top: -1rem;
+    margin-top: 0.5rem;
 }
 
-/* Estilos para el botón "Leer Más" */
+.tour-description {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+/* Botón "Leer Más" */
 .read-more-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.2rem 5rem;
-    background-color: #e27e08;
-    color: white;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
     font-weight: 600;
+    font-size: 0.875rem;
+    border: none;
     border-radius: 0.5rem;
-    transition: background-color 0.3s, transform 0.2s;
-    margin-top: 0.5rem;
-    width: fit-content;
-    margin-left: 10%;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
+
 .read-more-button:hover {
     background-color: #ea580c;
     transform: translateY(-2px);
 }
-.read-more-button svg {
+
+.read-more-button:active {
+    transform: translateY(0);
+}
+
+.button-arrow {
+    width: 1rem;
+    height: 1rem;
     margin-left: 0;
     opacity: 0;
-    transition: margin-left 0.2s, opacity 0.2s;
+    transition: margin-left var(--transition-fast), opacity var(--transition-fast);
 }
-.read-more-button:hover svg {
+
+.read-more-button:hover .button-arrow {
     margin-left: 0.5rem;
     opacity: 1;
 }
 
-/* Estilos para la insignia (badge) */
-.tour-badge {
+/* Botones de navegación */
+.carousel-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    display: inline-flex;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
     align-items: center;
-    gap: 0.25rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(10px);
 }
 
-/* Estilos para el divisor principal */
-.divider2 {
-    width: 55%;
-    height: 3px;
-    background: linear-gradient(to right, #004351 33.33%, #e27208 33.33% 66.66%, #aa252e 66.66% 100%);
-    margin: 10px auto 20px;
-    animation: dividerAnimation 1s ease-out forwards;
-    opacity: 0;
-    transform: scaleX(0);
+.carousel-button:hover {
+    background: var(--color-white);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: var(--shadow-lg);
+}
+
+.carousel-button:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-button-prev {
+    left: -1.5rem;
+}
+
+.carousel-button-next {
+    right: -1.5rem;
+}
+
+.carousel-button i {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    transition: color var(--transition-fast);
+}
+
+.carousel-button:hover i {
+    color: #ea580c;
+}
+
+/* Indicadores del carrusel */
+.carousel-indicators {
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.carousel-indicator {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.carousel-indicator:hover {
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.2);
+}
+
+.carousel-indicator.active {
+    background: var(--color-secondary);
+    transform: scale(1.3);
 }
 
 /* Animaciones */
 @keyframes dividerAnimation {
-    from { opacity: 0; transform: scaleX(0); }
-    to { opacity: 1; transform: scaleX(1); }
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
 }
 
 @keyframes fade-in-up {
@@ -130,92 +364,315 @@
         transform: translateY(0);
     }
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .animate-fade-in-up {
     animation: fade-in-up 0.6s ease-out forwards;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 .animate-fade-in {
     animation: fadeIn 1s ease-out forwards;
 }
+
 .animate-fade-in-delay {
     animation: fadeIn 1.5s ease-out forwards;
 }
 
-/* Estilos para el contenedor del carrusel */
-#train-carousel {
-    display: flex;
-    overflow-x: hidden; /* Oculta la barra de desplazamiento */
-    scroll-behavior: smooth;
-    padding: 0 1rem; /* Margen interno para que las cartas no toquen los bordes */
-    /* El ancho de este contenedor lo controlará su padre para el centrado */
-}
-
-#train-carousel .tour-card {
-    margin-right: 1.5rem; /* Equivalente a space-x-6 */
-}
-
-#train-carousel .tour-card:last-child {
-    margin-right: 0; /* Eliminar el margen del último elemento */
-}
-
-/* Contenedor padre de #train-carousel para centrar */
-.relative.flex.justify-center {
-    /* Calculamos el ancho de 3 tarjetas + 2 gaps + 2 * padding (si los hay) */
-    /* 3 * 380px (ancho de tarjeta) + 2 * 24px (gap) = 1140 + 48 = 1188px */
-    /* Ajustamos si hay padding horizontal en #train-carousel, que es px-8 (2rem = 32px) */
-    max-width: 1220px; /* Ancho deseado para las 3 tarjetas visibles */
-    margin: 0 auto; /* Centrar este contenedor en la página */
-    /* `justify-content: center` ya está aplicado en el HTML, lo cual es clave. */
-}
-
-/* Estilos para los botones de navegación del carrusel */
-.absolute.left-0, .absolute.right-0 {
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    font-size: 3rem;
-    color: #f97316;
-    transition: transform 0.3s, color 0.3s;
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 9999px;
-    padding: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
-}
-.absolute.left-0:hover, .absolute.right-0:hover {
-    color: #ea580c;
-    transform: translateY(-50%) scale(1.1);
-}
-
-/* Media queries para responsividad */
+/* Responsividad */
 @media (max-width: 1200px) {
-    .relative.flex.justify-center {
-        max-width: calc(3 * 380px + 2 * 24px); /* Sin padding en el cálculo del max-width si se quita el px de #train-carousel */
-        /* Ajustar según el diseño, quizás 100% menos un margen para los botones */
+    .carousel-container {
+        max-width: 900px;
+    }
+    
+    .train-carousel {
+        gap: 1rem;
     }
 }
 
-@media (max-width: 1023px) { /* Para 2 tarjetas en tablets */
-    .relative.flex.justify-center {
-        max-width: calc(2 * 380px + 1 * 24px);
+@media (max-width: 1024px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .carousel-container {
+        max-width: 750px;
+    }
+    
+    .carousel-button-prev {
+        left: -1rem;
+    }
+    
+    .carousel-button-next {
+        right: -1rem;
     }
 }
 
-@media (max-width: 767px) { /* Para 1 tarjeta en móviles */
-    .relative.flex.justify-center {
-        max-width: 380px; /* Solo una tarjeta + botones */
+@media (max-width: 768px) {
+    .train-tours-section {
+        padding: 2rem 0.5rem;
     }
-    #train-carousel .tour-card {
-        width: 100%;
-        max-width: 380px;
-        margin-left: auto;
-        margin-right: auto;
+    
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
     }
+    
+    .description-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .carousel-container {
+        max-width: 100%;
+        padding: 0 0.5rem;
+    }
+    
+    .train-carousel {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .tour-card {
+        height: 420px;
+    }
+    
+    .tour-card-content {
+        padding: 1rem;
+    }
+    
+    .tour-title {
+        font-size: 1.25rem;
+    }
+    
+    .tour-price {
+        font-size: 1rem;
+    }
+    
+    .tour-badge {
+        top: 0.75rem;
+        right: 0.75rem;
+        padding: 0.375rem 0.5rem;
+        font-size: 0.625rem;
+    }
+    
+    .badge-text {
+        display: none;
+    }
+    
+    .carousel-button {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .carousel-button i {
+        font-size: 1.25rem;
+    }
+    
+    .carousel-button-prev {
+        left: -0.5rem;
+    }
+    
+    .carousel-button-next {
+        right: -0.5rem;
+    }
+    
+    .carousel-indicators {
+        bottom: -2.5rem;
+    }
+    
     .read-more-button {
-        width: 80%;
-        margin-left: 10%;
+        padding: 0.625rem 1.25rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .train-tours-section {
+        padding: 1.5rem 0.25rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+    
+    .description-text {
+        font-size: 0.875rem;
+    }
+    
+    .divider2 {
+        width: 85%;
+    }
+    
+    .carousel-container {
+        padding: 0 0.25rem;
+    }
+    
+    .train-carousel {
+        gap: 1.3rem;
+        padding: 0 1.5rem;
+    }
+    
+    .tour-card {
+        height: 380px;
+    }
+    
+    .tour-card-content {
+        padding: 2rem;
+    }
+    
+    .tour-title {
+        font-size: 1.125rem;
+    }
+    
+    .tour-location {
+        font-size: 0.75rem;
+    }
+    
+    .tour-price {
+        font-size: 0.875rem;
+    }
+    
+    .tour-description {
+        font-size: 0.75rem;
+    }
+    
+    .carousel-button {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .carousel-button i {
+        font-size: 1rem;
+    }
+    
+    .carousel-button-prev {
+        left: -0.25rem;
+    }
+    
+    .carousel-button-next {
+        right: -0.25rem;
+    }
+    
+    .read-more-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Mejoras para accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .train-carousel {
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Estados de focus para accesibilidad */
+.carousel-button:focus,
+.carousel-indicator:focus,
+.read-more-button:focus {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
+}
+
+/* Mejoras para pantallas táctiles */
+@media (hover: none) and (pointer: coarse) {
+    .tour-card:hover {
+        transform: none;
+    }
+    
+    .tour-card:active {
+        transform: scale(0.98);
+    }
+    
+    .tour-card:hover .tour-description-hidden {
+        max-height: 0;
+        opacity: 0;
+        margin-top: 0;
+    }
+    
+    .carousel-button:hover {
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.9);
+    }
+    
+    .carousel-button:active {
+        transform: translateY(-50%) scale(0.9);
+        background: var(--color-white);
+    }
+}
+
+/* Efectos de carga */
+.tour-card.loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Utilidades de scroll suave */
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+.no-scroll {
+    scroll-behavior: auto;
+}
+
+/* Mejoras para orientación landscape en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+    .tour-card {
+        height: 300px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .description-text {
+        font-size: 0.875rem;
+    }
+    
+    .carousel-indicators {
+        bottom: -2rem;
+    }
+}
+
+/* Soporte para navegadores antiguos */
+@supports not (backdrop-filter: blur(10px)) {
+    .tour-badge {
+        background: rgba(0, 67, 81, 0.95);
+    }
+    
+    .carousel-button {
+        background: rgba(255, 255, 255, 0.95);
     }
 }
