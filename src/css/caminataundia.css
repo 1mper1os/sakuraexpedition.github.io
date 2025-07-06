@@ -1,0 +1,351 @@
+/* caminataundia.css */
+
+
+
+.one-day-tours-section .container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.one-day-tours-section header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.one-day-tours-section h2 {
+    
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+@media (min-width: 1024px) {
+    .one-day-tours-section h2 {
+        font-size: 3rem;
+        line-height: 1;
+    }
+}
+
+.one-day-tours-section header p {
+    max-width: 5xl; /* Adjust for 80% width, this will be handled in CSS */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.125rem;
+    line-height: 1.625;
+    color: #4b5563;
+}
+/* New rule for 80% width text */
+.one-day-tours-section header p.text-description-80 {
+    width: 80%; /* Adjust to 80% */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.one-day-tours-section header strong {
+    color: #004351;
+}
+
+.divider8 {
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(to right, #004351 33.33%, #e27208 33.33% 66.66%, #aa252e 66.66% 100%);
+  margin: -10px auto 20px;
+  animation: dividerAnimation 1s ease-out forwards;
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.one-day-tours-section header > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+.one-day-tours-section header > div > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.one-day-tours-section header svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #4f46e5;
+}
+
+.one-day-tours-section .bg-white.rounded-2xl {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+.one-day-tours-section .bg-white.rounded-2xl > div {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .one-day-tours-section .bg-white.rounded-2xl > div {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+.one-day-tours-section .bg-white.rounded-2xl h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+.one-day-tours-section .bg-white.rounded-2xl ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+.one-day-tours-section .bg-white.rounded-2xl ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+}
+.one-day-tours-section .bg-white.rounded-2xl ul svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #4f46e5;
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+}
+
+.one-day-tours-section .bg-gradient-to-br {
+    background-image: linear-gradient(to bottom right, #004351, #3730a3);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    color: #fff;
+}
+.one-day-tours-section .bg-gradient-to-br h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.one-day-tours-section .bg-gradient-to-br > div {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    font-size: 0.875rem;
+}
+.one-day-tours-section .bg-gradient-to-br > div > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.one-day-tours-section .bg-gradient-to-br svg {
+    width: 1rem;
+    height: 1rem;
+    color: #fff;
+}
+
+.one-day-tours-section .grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+    .one-day-tours-section .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (min-width: 1024px) {
+    .one-day-tours-section .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.one-day-tour-card-wrapper {
+    position: relative;
+    cursor: pointer;
+}
+.one-day-tour-card-wrapper > div {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.one-day-tour-card-wrapper:hover > div {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.one-day-tour-card-wrapper img {
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+.one-day-tour-card-wrapper:hover img {
+    transform: scale(1.05);
+}
+.one-day-tour-card-wrapper .absolute.inset-0 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2), transparent);
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+.one-day-tour-card-wrapper:hover .absolute.inset-0 {
+    opacity: 0.4;
+}
+
+.one-day-tour-card-wrapper .absolute.top-4.right-4 {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 20;
+}
+.one-day-tour-card-wrapper .bg-indigo-600 {
+    background-color: #004351;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: 0.875rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(5px);
+}
+.one-day-tour-card-wrapper .bg-indigo-600 .text-xs {
+    font-size: 0.75rem;
+    opacity: 0.9;
+    margin-bottom: 0.125rem;
+    margin-top: 0.125rem;
+}
+.one-day-tour-card-wrapper .bg-indigo-600 .text-xl {
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.one-day-tour-card-wrapper .absolute.bottom-0.left-0 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    z-index: 10;
+}
+.one-day-tour-card-wrapper .absolute.bottom-0.left-0 h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.375;
+}
+
+.one-day-tour-card-wrapper .p-4 {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* Adjusted description text to occupy 80% */
+.one-day-tour-card-wrapper .p-4 > div:first-child p.text-description-80 {
+    font-size: 0.875rem;
+    color: #374151;
+    margin-bottom: 0.75rem;
+    width: 80%; /* Sets the width to 80% */
+    margin-left: auto;
+    margin-right: auto;
+   
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: center; /* Center the text within the 80% width */
+}
+
+
+.one-day-tour-card-wrapper .space-y-2 > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4b5563;
+    font-size: 0.875rem;
+}
+.one-day-tour-card-wrapper .space-y-2 svg {
+    width: 1rem;
+    height: 1rem;
+    color: #004351;
+}
+.one-day-tour-card-wrapper .space-y-2 {
+    margin-bottom: 1rem;
+}
+
+.one-day-tour-card-wrapper .pt-2 {
+    padding-top: 0.5rem;
+    border-top: 1px solid #f3f4f6;
+}
+.one-day-tour-card-wrapper button {
+    width: 100%;
+    background-color: #004351;
+    color: #fff;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    font-size: 0.875rem;
+}
+.one-day-tour-card-wrapper button:hover {
+    background-color: #4338ca;
+}
+
+/* "Ver Más" Button Container */
+.one-day-tours-section .flex.justify-end {
+    display: flex;
+    justify-content: flex-end; /* Moves button to the right */
+    margin-bottom: 3rem; /* Added margin for separation */
+}
+
+.one-day-tours-section #ver-mas-one-day-tours {
+    background-image: linear-gradient(to right, #004351, #3730a3);
+    color: #fff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    transition: all 0.3s;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(0); 
+}
+.one-day-tours-section #ver-mas-one-day-tours:hover {
+    background-image: linear-gradient(to right, #3730a3, #004351);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-0.25rem);
+}
+.one-day-tours-section #ver-mas-one-day-tours svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: 0.5rem;
+    display: inline-block;
+}

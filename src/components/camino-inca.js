@@ -1,56 +1,57 @@
-// camino-inca.js
 import caminoIncaData from './../jsons/camino-inca.json';
 import './../css/camino-inca.css';
 
 function createCaminoIncaCard(tour) {
     return `
-        <div class="card-container">
-            <div class="card-inner">
+        <div class="w-full max-w-[350px] opacity-0 translate-y-5 scale-100 animate-[cardSlideIn_0.6s_cubic-bezier(0.25,0.46,0.45,0.94)_forwards]">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden relative h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                 <!-- Imagen principal -->
-                <div class="card-image-container">
+                <div class="relative h-60 overflow-hidden">
                     <img src="${tour.image}" 
-                         class="card-image" 
+                         class="w-full h-full object-cover transition-all duration-300 group-hover:scale-105" 
                          alt="${tour.alt}" 
                          onerror="this.onerror=null;this.src='https://placehold.co/400x600/F0F0F0/666666?text=Imagen+No+Disponible';">
                     
                     <!-- Overlay con gradiente -->
-                    <div class="card-overlay"></div>
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(0,67,81,0.1)] to-[rgba(0,67,81,0.3)] opacity-0 transition-all duration-300 group-hover:opacity-100"></div>
                 </div>
 
                 <!-- Contenido de la tarjeta -->
-                <div class="card-content">
+                <div class="p-6 flex flex-col h-[calc(100%-240px)]">
                     <!-- Información principal -->
-                    <div class="card-info">
-                        <div class="price-badge">
-                            <i class="fa-solid fa-dollar-sign"></i>
-                            <span class="price-text"> ${tour.price}</span>
+                    <div class="flex-1">
+                        <div class="inline-flex items-center gap-2 bg-[#e27208] text-white px-3 py-1 rounded-full text-sm font-medium mb-4">
+                            <i class="fa-solid fa-dollar-sign text-xs"></i>
+                            <span>${tour.price}</span>
                         </div>
                         
-                        <h3 class="card-title">${tour.title}</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 leading-snug">${tour.title}</h3>
                         
-                        ${tour.duration ? `<div class="tour-duration">
-                            <i class="fas fa-clock"></i>
+                        ${tour.duration ? `<div class="flex items-center gap-2 text-gray-500 text-sm mb-2">
+                            <i class="fas fa-clock text-[#e27208]"></i>
                             <span>${tour.duration}</span>
                         </div>` : ''}
                         
-                        ${tour.difficulty ? `<div class="difficulty-badge difficulty-${tour.difficulty.toLowerCase()}">
+                        ${tour.difficulty ? `<div class="inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-semibold mb-4 ${
+                            tour.difficulty.toLowerCase() === 'fácil' ? 'bg-[#c6f6d5] text-[#22543d]' : 
+                            tour.difficulty.toLowerCase() === 'moderado' ? 'bg-[#fef5e7] text-[#c05621]' : 
+                            'bg-[#fed7d7] text-[#c53030]'
+                        }">
                             <i class="fas fa-mountain"></i>
                             <span>${tour.difficulty}</span>
                         </div>` : ''}
                         
-                        
-                        
-                        ${tour.description ? `<p class="card-description">${tour.description}</p>` : ''}
+                        ${tour.description ? `<p class="text-gray-500 leading-relaxed mb-4 line-clamp-3">${tour.description}</p>` : ''}
                     </div>
 
                     <!-- Botones de acción -->
-                    <div class="card-actions">
-                        <button class="btn-primary" onclick="bookTour('${tour.id || tour.title}')">
+                    <div class="flex flex-col gap-3 mt-auto">
+                        <button class="flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-semibold transition-all duration-300 cursor-pointer border-none text-sm bg-[#004351] text-white hover:bg-[#005f73] hover:-translate-y-0.5 hover:shadow-md focus:outline-2 focus:outline-[#e27208] focus:outline-offset-2" onclick="bookTour('${tour.id || tour.title}')">
                             <i class="fas fa-calendar-plus"></i>
                             Reservar Ahora
                         </button>
                         
-                        <button class="btn-secondary" onclick="viewDetails('${tour.id || tour.title}')">
+                        <button class="flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-semibold transition-all duration-300 cursor-pointer text-sm bg-transparent text-[#004351] border-2 border-[#004351] hover:bg-[#004351] hover:text-white hover:-translate-y-0.5 focus:outline-2 focus:outline-[#e27208] focus:outline-offset-2" onclick="viewDetails('${tour.id || tour.title}')">
                             <i class="fas fa-info-circle"></i>
                             Ver Detalles
                         </button>
@@ -63,56 +64,62 @@ function createCaminoIncaCard(tour) {
 
 export function getCaminoIncaHTML() {
     return `
-        <section class="camino-inca-section">
-            <div class="container">
+        <section class="min-h-screen py-16 bg-gradient-to-br from-[#f7fafc] to-[#edf2f7]">
+            <div class="max-w-7xl mx-auto px-5 md:px-10">
                 <!-- Header -->
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <i class="fas fa-mountain"></i>
+                <div class="text-center mb-16 opacity-0 translate-y-8 animate-[fadeInUp_0.8s_ease-out_forwards]">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-[#aa252e] mb-4 flex items-center justify-center gap-3">
+                        <i class="fas fa-mountain text-3xl text-[#004351]"></i>
                         Camino Inca a Machu Picchu
                     </h2>
-                    <div class="section-divider"></div>
-                    <p class="section-description">
+                    <div class="mx-auto divider8"></div>
+                    <p class="text-lg leading-relaxed text-gray-800 max-w-11xl mx-auto">
                         <strong>El Camino Inca a Machu Picchu</strong> es una de las rutas de senderismo más espectaculares y buscadas del mundo,
                         famosa por combinar aventura, naturaleza y arqueología en un solo viaje. Este antiguo sendero inca serpentea a través de los impresionantes paisajes de los Andes peruanos, bosques nubosos y fascinantes sitios arqueológicos, culminando en la icónica ciudadela de
                         <strong>Machu Picchu</strong>, una de las Siete Maravillas del Mundo Moderno. Recorrer el
-                        <span class="highlight-text">Camino Inca</span> no solo permite descubrir la historia de los incas, sino también disfrutar de vistas panorámicas únicas y experiencias inolvidables.
+                        <span class="text-[#e27208] font-semibold">Camino Inca</span> no solo permite descubrir la historia de los incas, sino también disfrutar de vistas panorámicas únicas y experiencias inolvidables.
                     </p>
                 </div>
 
                 <!-- Tours grid -->
-                <div class="tours-section">
-                    <h3 class="tours-subtitle">
-                        <i class="fas fa-star"></i>
-                        Tours Más Recomendados
-                    </h3>
-                    <div class="tours-grid" id="camino-inca-cards-container">
+                <div class="mb-16">
+                    <div class="flex justify-between items-center mb-1">
+                        <h3 class="text-2xl font-bold text-gray-800 flex items-center gap-2">
+                            <i class="fas fa-star text-[#e27208]"></i>
+                            Tours Más Recomendados
+                        </h3>
+                        <button class="flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all duration-300 cursor-pointer text-sm bg-[#004351] text-white hover:bg-[#005f73] hover:-translate-y-0.5 hover:shadow-md focus:outline-2 focus:outline-[#e27208] focus:outline-offset-2">
+                            <span>Ver Más</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center" id="camino-inca-cards-container">
                         <!-- Las tarjetas se generan dinámicamente aquí -->
                     </div>
                 </div>
 
                 <!-- Información adicional -->
-                <div class="info-section">
-                    <div class="info-grid">
-                        <div class="info-card">
-                            <i class="fas fa-calendar-alt"></i>
-                            <h4>Mejor Época</h4>
-                            <p>Mayo a Septiembre (temporada seca)</p>
+                <div class="mt-16">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                        <div class="bg-white p-6 rounded-xl shadow-sm text-center transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                            <i class="fas fa-calendar-alt text-3xl text-[#e27208] mb-4"></i>
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Mejor Época</h4>
+                            <p class="text-gray-500 leading-normal">Mayo a Septiembre (temporada seca)</p>
                         </div>
-                        <div class="info-card">
-                            <i class="fas fa-users"></i>
-                            <h4>Grupos Pequeños</h4>
-                            <p>Máximo 16 personas por grupo</p>
+                        <div class="bg-white p-6 rounded-xl shadow-sm text-center transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                            <i class="fas fa-users text-3xl text-[#e27208] mb-4"></i>
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Grupos Pequeños</h4>
+                            <p class="text-gray-500 leading-normal">Máximo 16 personas por grupo</p>
                         </div>
-                        <div class="info-card">
-                            <i class="fas fa-shield-alt"></i>
-                            <h4>Seguridad</h4>
-                            <p>Guías certificados y equipos de seguridad</p>
+                        <div class="bg-white p-6 rounded-xl shadow-sm text-center transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                            <i class="fas fa-shield-alt text-3xl text-[#e27208] mb-4"></i>
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Seguridad</h4>
+                            <p class="text-gray-500 leading-normal">Guías certificados y equipos de seguridad</p>
                         </div>
-                        <div class="info-card">
-                            <i class="fas fa-leaf"></i>
-                            <h4>Eco-Friendly</h4>
-                            <p>Turismo responsable y sostenible</p>
+                        <div class="bg-white p-6 rounded-xl shadow-sm text-center transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                            <i class="fas fa-leaf text-3xl text-[#e27208] mb-4"></i>
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Eco-Friendly</h4>
+                            <p class="text-gray-500 leading-normal">Turismo responsable y sostenible</p>
                         </div>
                     </div>
                 </div>
@@ -121,6 +128,7 @@ export function getCaminoIncaHTML() {
     `;
 }
 
+// El resto del código (initCaminoInca, bookTour, viewDetails, initScrollAnimations) permanece igual
 export function initCaminoInca() {
     const container = document.getElementById("camino-inca-cards-container");
     if (!container) {

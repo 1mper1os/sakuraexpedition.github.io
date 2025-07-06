@@ -65,7 +65,7 @@
 
 /* Divisor */
 .divider2 {
-    width: 60%;
+    width: 70%;
     height: 3px;
     background: linear-gradient(to right, var(--color-primary) 33.33%, var(--color-secondary) 33.33% 66.66%, var(--color-accent) 66.66% 100%);
     margin: 1rem auto 2rem;

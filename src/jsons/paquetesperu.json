@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Perú Machupicchu encantador 4D",
+    "description": "Descubre la esencia del Perú con visitas a Cusco, el Valle Sagrado y Machu Picchu en un tour de 4 días lleno de historia y paisajes inolvidables.",
+    "image": "/cam2.jpg",
+    "alt": "Machu Picchu Encantador",
+    "duration": "4 días",
+    "location": "Cusco, Valle Sagrado, Machu Picchu",
+    "price": "499"
+  },
+  {
+    "title": "Tour Machupicchu Oro 4D",
+    "description": "Vive una experiencia premium visitando lo mejor de Cusco con servicios de lujo y acceso preferencial a los destinos más emblemáticos.",
+    "image": "/cam2.jpg",
+    "alt": "Tour Machupicchu Oro",
+    "duration": "4 días",
+    "location": "Cusco, Machu Picchu",
+    "price": "750"
+  },
+  {
+    "title": "Tour Machupicchu Inca 5D",
+    "description": "Una aventura de 5 días recorriendo los caminos ancestrales de los Incas, descubriendo los secretos de su cultura y sus paisajes milenarios.",
+    "image": "/cam2.jpg",
+    "alt": "Tour Inca",
+    "duration": "5 días",
+    "location": "Cusco, Camino Inca, Machu Picchu",
+    "price": "680"
+  }
+]

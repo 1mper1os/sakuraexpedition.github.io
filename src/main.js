@@ -14,6 +14,8 @@ import { getTiposToursHTML, initTiposTours } from "./components/tipostours.js";
 import { getReviewsHTML, initReviews } from "./components/reviews.js";
 import { contacto } from "./components/contacto.js";
 import { blogs } from "./components/blogs.js";
+import { getundia, initOneDayToursLogic } from "./components/caminata1dia.js";
+import { getPaquetesPeru } from "./components/paquetesperu.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const appDiv = document.querySelector("#app");
@@ -28,8 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
       nosotros() +
       promociones() +
       getCaminoIncaHTML() +
-      getTrainToursHTML() +
       getSalkantayHTML() +
+      getTrainToursHTML() +
+      getundia() +
+      getPaquetesPeru()+
       //getTiposToursHTML() +
       getReviewsHTML() +
       contacto() +
@@ -43,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initSalkantay();
     initTiposTours();
     initReviews();
+    initOneDayToursLogic();
   } else {
     console.log("El elemento con ID 'app' no fue encontrado en el DOM");
   }
