@@ -1,0 +1,84 @@
+[
+  {
+    "id": "paracas-huacachina",
+    "image": "https://via.placeholder.com/600x400/FF0000/FFFFFF?text=Paracas+Huacachina",
+    "alt": "Tour Paracas y Huacachina",
+    "price": "$120",
+    "oldPrice": "$150",
+    "title": "Paracas - Huacachina 1 Día",
+    "days": "1 día",
+    "location": "Ica - Paracas",
+    "includes": [
+      "Transporte turístico",
+      "Guía profesional",
+      "Paseo en bote Paracas",
+      "Tubulares y sandboard Huacachina"
+    ],
+    "description": "Descubre la fauna marina de las Islas Ballestas y la adrenalina del desierto en la Huacachina."
+  },
+  {
+    "id": "uros-taquile",
+    "image": "https://via.placeholder.com/600x400/0000FF/FFFFFF?text=Uros+Taquile",
+    "alt": "Tour Isla de Uros y Taquile",
+    "price": "$180",
+    "oldPrice": null,
+    "title": "Isla de Uros y Taquile 2D/1N",
+    "days": "2 días / 1 noche",
+    "location": "Puno - Lago Titicaca",
+    "includes": [
+      "Transporte lacustre",
+      "Guía bilingüe",
+      "Alojamiento en Taquile (opcional)",
+      "Visita Islas flotantes de Uros"
+    ],
+    "description": "Explora las fascinantes islas flotantes de los Uros y la cultura ancestral de Taquile en el Lago Titicaca."
+  },
+  {
+    "id": "canon-colca",
+    "image": "https://via.placeholder.com/600x400/008000/FFFFFF?text=Ca%C3%B1on+Colca",
+    "alt": "Tour Cañón del Colca",
+    "price": "$95",
+    "oldPrice": null,
+    "title": "Cañón del Colca 1 Día",
+    "days": "1 día",
+    "location": "Arequipa - Cañón del Colca",
+    "includes": [
+      "Transporte y guía",
+      "Mirador del Cóndor",
+      "Desayuno local"
+    ],
+    "description": "Maravíllate con el vuelo del cóndor y los impresionantes paisajes del Cañón del Colca."
+  },
+  {
+    "id": "lima-gastronomica",
+    "image": "https://via.placeholder.com/600x400/FFFF00/000000?text=Lima+Gastronomica",
+    "alt": "Tour Gastronómico Lima",
+    "price": "$85",
+    "oldPrice": null,
+    "title": "Lima y Gastronomía",
+    "days": "Medio día",
+    "location": "Lima",
+    "includes": [
+      "Tour guiado por mercados",
+      "Clase de cocina",
+      "Degustación de platos típicos"
+    ],
+    "description": "Sumérgete en la vibrante escena culinaria de Lima, la capital gastronómica de América."
+  },
+  {
+    "id": "nazca-huacachina",
+    "image": "https://via.placeholder.com/600x400/FF5733/FFFFFF?text=Nazca+Huacachina",
+    "alt": "Tour Líneas de Nazca y Huacachina",
+    "price": "$250",
+    "oldPrice": "$280",
+    "title": "Líneas de Nazca y Huacachina",
+    "days": "1 día",
+    "location": "Ica - Nazca",
+    "includes": [
+      "Vuelo sobre Líneas de Nazca",
+      "Tour Huacachina",
+      "Paseo en buggies"
+    ],
+    "description": "Descubre el misterio de las Líneas de Nazca y vive la aventura en el oasis de la Huacachina."
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "aatc",
+    "name": "AATC (Asociación Peruana de Agencias de Turismo de Cusco)",
+    "src": "URL_IMAGEN_AATC_AQUI.png",
+    "alt": "Logo AATC",
+    "heightClass": "h-20 sm:h-24 md:h-28"
+  },
+  {
+    "id": "gericetur",
+    "name": "GERICETUR (Gerencia Regional de Comercio Exterior, Turismo y Artesanía)",
+    "src": "URL_IMAGEN_GERICETUR_AQUI.png",
+    "alt": "Logo GERICETUR",
+    "heightClass": "h-20 sm:h-24 md:h-28"
+  },
+  {
+    "id": "sernamip-peru",
+    "name": "Sernamip Perú",
+    "src": "URL_IMAGEN_SERNAMIP_AQUI.png",
+    "alt": "Logo Sernamip Perú",
+    "heightClass": "h-20 sm:h-24 md:h-28"
+  },
+  {
+    "id": "lonely-planet",
+    "name": "Lonely Planet",
+    "src": "URL_IMAGEN_LONELY_PLANET_AQUI.png",
+    "alt": "Logo Lonely Planet",
+    "heightClass": "h-20 sm:h-24 md:h-28"
+  },
+  {
+    "id": "agencia-viajes-registrada",
+    "name": "Agencia de Viajes y Turismo Registrada",
+    "src": "URL_IMAGEN_AGENCIA_REGISTRADA_AQUI.png",
+    "alt": "Logo Agencia de Viajes y Turismo Registrada",
+    "heightClass": "h-20 sm:h-24 md:h-28"
+  },
+  {
+    "id": "protegeme",
+    "name": "Protéme (Turismo Responsable para prevenir la explotación sexual de niños, niñas y adolescentes)",
+    "src": "URL_IMAGEN_PROTEGEME_AQUI.png",
+    "alt": "Logo Protégeme",
+    "heightClass": "h-20 sm:h-24 md:h-28"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "companyName": "Sakura Expedition",
+  "aboutUsLinks": [
+    {"text": "Acerca de Sakura", "url": "#"},
+    {"text": "Políticas de Privacidad", "url": "#"},
+    {"text": "Código ESNNA", "url": "#"},
+    {"text": "Términos y Condiciones", "url": "#"},
+    {"text": "Contáctenos", "url": "#"}
+  ],
+  "contactInfo": [
+    {"type": "email", "value": "ventas@sakuraexpedition.com", "label": "Email de Ventas"},
+    {"type": "phone", "value": "+51 993 150 947", "label": "Sales Manager"},
+    {"type": "email", "value": "info@sakuraexpedition.com", "label": "Email General"},
+    {"type": "phone", "value": "+51 941 401 418", "label": "Booking Manager"},
+    {"type": "address", "value": "Street Garcilaso 265 Of. 1 Cusco", "label": "Dirección"},
+    {"type": "phone", "value": "+51 927 263 982", "label": "Teléfono Adicional"}
+  ],
+  "ourDestinations": [
+    {"text": "Camino Inca 2 días a Machu Picchu con Hotel", "url": "#"},
+    {"text": "Machu Picchu por tren Vistadome 1 Día", "url": "#"},
+    {"text": "Montaña de Colores 1 día", "url": "#"},
+    {"text": "Tour Laguna Humantay 1 día", "url": "#"},
+    {"text": "Cusco Express 4D/3N", "url": "#"}
+  ]
+}

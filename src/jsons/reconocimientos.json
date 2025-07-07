@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Safe Travels",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Safe_Travels_Stamp_WTTC.png",
+    "alt": "Safe Travels Logo",
+    "type": "logo",
+    "heightClass": "h-20 sm:h-24 md:h-28"
+  },
+  {
+    "name": "TripAdvisor 2017",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/TripAdvisor_Logo.svg/2560px-TripAdvisor_Logo.svg.png",
+    "alt": "TripAdvisor 2017 Travelers' Choice",
+    "type": "tripadvisor",
+    "year": "2017",
+    "award": "Travelers' Choice",
+    "heightClass": "h-24 sm:h-28 md:h-32"
+  },
+  {
+    "name": "TripAdvisor 2018",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/TripAdvisor_Logo.svg/2560px-TripAdvisor_Logo.svg.png",
+    "alt": "TripAdvisor 2018 Travelers' Choice",
+    "type": "tripadvisor",
+    "year": "2018",
+    "award": "Travelers' Choice",
+    "heightClass": "h-24 sm:h-28 md:h-32"
+  },
+  {
+    "name": "TripAdvisor 2019",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/TripAdvisor_Logo.svg/2560px-TripAdvisor_Logo.svg.png",
+    "alt": "TripAdvisor 2019 Travelers' Choice",
+    "type": "tripadvisor",
+    "year": "2019",
+    "award": "Travelers' Choice",
+    "heightClass": "h-24 sm:h-28 md:h-32"
+  },
+  {
+    "name": "TripAdvisor 2023",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/TripAdvisor_Logo.svg/2560px-TripAdvisor_Logo.svg.png",
+    "alt": "TripAdvisor 2023 Best of the Best",
+    "type": "tripadvisor",
+    "year": "2023",
+    "award": "Travelers' Choice",
+    "bestOfBest": true,
+    "heightClass": "h-24 sm:h-28 md:h-32"
+  },
+  {
+    "name": "TripAdvisor 2024",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/TripAdvisor_Logo.svg/2560px-TripAdvisor_Logo.svg.png",
+    "alt": "TripAdvisor 2024 Travelers' Choice",
+    "type": "tripadvisor",
+    "year": "2024",
+    "award": "Travelers' Choice",
+    "heightClass": "h-24 sm:h-28 md:h-32"
+  },
+  {
+    "name": "TripAdvisor 2025",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/TripAdvisor_Logo.svg/2560px-TripAdvisor_Logo.svg.png",
+    "alt": "TripAdvisor 2025 Travelers' Choice",
+    "type": "tripadvisor",
+    "year": "2025",
+    "award": "Travelers' Choice",
+    "heightClass": "h-24 sm:h-28 md:h-32"
+  },
+  {
+    "name": "Premio Miradas Internacionales",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Premio_Miradas.svg/1280px-Premio_Miradas.svg.png",
+    "alt": "Premio Miradas Internacionales Logo",
+    "type": "logo",
+    "heightClass": "h-24 sm:h-28 md:h-32"
+  },
+  {
+    "name": "Comunidad Empresarial de Tratados Comerciales",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Trade_Agreements_Business_Community_Logo.svg/1280px-Trade_Agreements_Business_Community_Logo.svg.png",
+    "alt": "Comunidad Empresarial de Tratados Comerciales Logo",
+    "type": "logo",
+    "heightClass": "h-28 sm:h-32 md:h-36"
+  }
+]

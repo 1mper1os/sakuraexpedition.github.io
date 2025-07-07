@@ -16,6 +16,11 @@ import { contacto } from "./components/contacto.js";
 import { blogs } from "./components/blogs.js";
 import { getundia, initOneDayToursLogic } from "./components/caminata1dia.js";
 import { getPaquetesPeru } from "./components/paquetesperu.js";
+import { getAmazonTours, initAmazonToursLogic  } from "./components/amazonas.js";
+import { getDestinosHTML, initDestinosLogic } from "./components/destinos.js";
+import { getAwardsSectionHTML, initAwardsLogic } from "./components/reconocimientos.js";
+import { getAfiliacionesSectionHTML,initAfiliacionesLogic } from "./components/afiliaciones.js";
+import { getFooterHTML, initFooterLogic } from "./components/footer.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const appDiv = document.querySelector("#app");
@@ -34,10 +39,16 @@ document.addEventListener("DOMContentLoaded", () => {
       getTrainToursHTML() +
       getundia() +
       getPaquetesPeru()+
+      getAmazonTours()+
+      getDestinosHTML()+
+      getAwardsSectionHTML()+
       //getTiposToursHTML() +
       getReviewsHTML() +
-      contacto() +
-      blogs();
+      getAfiliacionesSectionHTML() + 
+      //contacto() +
+      blogs() +
+      getFooterHTML();
+
 
 
     initHeaderListeners();
@@ -48,6 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
     initTiposTours();
     initReviews();
     initOneDayToursLogic();
+    initAmazonToursLogic();
+    initDestinosLogic();
+    initAwardsLogic();
+    initAfiliacionesLogic();
+    initFooterLogic();
   } else {
     console.log("El elemento con ID 'app' no fue encontrado en el DOM");
   }

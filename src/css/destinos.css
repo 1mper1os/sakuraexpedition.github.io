@@ -45,19 +45,19 @@
   }
 }
 
-/* Estilos para las tarjetas de tours */
-.tour-card-wrapper {
+/* Estilos para las tarjetas de destinos */
+.destinos-tour-card-wrapper { /* Renombrado de tour-card-wrapper */
   transition: all 0.3s ease;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
 
-.tour-card-wrapper:hover {
+.destinos-tour-card-wrapper:hover { /* Renombrado de tour-card-wrapper */
   transform: translateY(-8px);
 }
 
-.tour-card-wrapper:focus-within {
+.destinos-tour-card-wrapper:focus-within { /* Renombrado de tour-card-wrapper */
   outline: 2px solid #aa252e;
   outline-offset: 4px;
   border-radius: 16px;
@@ -71,18 +71,18 @@
     margin: 8px auto 16px;
   }
   
-  .tour-card-wrapper {
+  .destinos-tour-card-wrapper { /* Renombrado de tour-card-wrapper */
     max-width: 100%;
   }
 }
 
 /* Mejoras de accesibilidad */
-.tour-card-wrapper:focus {
+.destinos-tour-card-wrapper:focus { /* Renombrado de tour-card-wrapper */
   outline: 2px solid #aa252e;
   outline-offset: 2px;
 }
 
-.tour-card-wrapper[role="button"]:focus {
+.destinos-tour-card-wrapper[role="button"]:focus { /* Renombrado de tour-card-wrapper */
   box-shadow: 0 0 0 3px rgba(170, 37, 46, 0.3);
 }
 
@@ -101,12 +101,12 @@ button[id^="ver-mas"]:active {
 }
 
 /* Estados de carga */
-.tour-card-wrapper.loading {
+.destinos-tour-card-wrapper.loading { /* Renombrado de tour-card-wrapper */
   opacity: 0.6;
   pointer-events: none;
 }
 
-.tour-card-wrapper.loading::before {
+.destinos-tour-card-wrapper.loading::before { /* Renombrado de tour-card-wrapper */
   content: '';
   position: absolute;
   top: 0;
@@ -153,12 +153,12 @@ button[id^="ver-mas"]:active {
 }
 
 /* Estilos para contenedores */
-#salkantay-cards-container {
+#destinos-cards-container { /* Renombrado de salkantay-cards-container */
   min-height: 200px;
   transition: all 0.3s ease;
 }
 
-#salkantay-cards-container:empty {
+#destinos-cards-container:empty { /* Renombrado de salkantay-cards-container */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,7 +169,7 @@ button[id^="ver-mas"]:active {
 }
 
 /* Animaciones de entrada para las tarjetas */
-.tour-card-wrapper {
+.destinos-tour-card-wrapper { /* Renombrado de tour-card-wrapper */
   animation: cardEnter 0.6s ease-out forwards;
 }
 
@@ -185,27 +185,27 @@ button[id^="ver-mas"]:active {
 }
 
 /* Retrasos escalonados para múltiples tarjetas */
-.tour-card-wrapper:nth-child(1) {
+.destinos-tour-card-wrapper:nth-child(1) { /* Renombrado de tour-card-wrapper */
   animation-delay: 0.1s;
 }
 
-.tour-card-wrapper:nth-child(2) {
+.destinos-tour-card-wrapper:nth-child(2) { /* Renombrado de tour-card-wrapper */
   animation-delay: 0.2s;
 }
 
-.tour-card-wrapper:nth-child(3) {
+.destinos-tour-card-wrapper:nth-child(3) { /* Renombrado de tour-card-wrapper */
   animation-delay: 0.3s;
 }
 
-.tour-card-wrapper:nth-child(4) {
+.destinos-tour-card-wrapper:nth-child(4) { /* Renombrado de tour-card-wrapper */
   animation-delay: 0.4s;
 }
 
-.tour-card-wrapper:nth-child(5) {
+.destinos-tour-card-wrapper:nth-child(5) { /* Renombrado de tour-card-wrapper */
   animation-delay: 0.5s;
 }
 
-.tour-card-wrapper:nth-child(6) {
+.destinos-tour-card-wrapper:nth-child(6) { /* Renombrado de tour-card-wrapper */
   animation-delay: 0.6s;
 }
 
