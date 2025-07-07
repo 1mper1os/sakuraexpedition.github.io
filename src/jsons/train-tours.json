@@ -13,7 +13,7 @@
   },
   {
     "id": 2,
-    "image": "/card2.jpg",
+    "image": "/tren_map.jpg",
     "alt": "Tour en tren a Machu Picchu 2",
     "isFavorite": true,
     "location": "Cusco - Aguas Calientes - Machupicchu",
@@ -37,7 +37,7 @@
   },
   {
     "id": 4,
-    "image": "/card3.jpg",
+    "image": "/tren_mapp.jpg",
     "alt": "Tour en tren a Machu Picchu 4",
     "isFavorite": true,
     "location": "Poroy - Aguas Calientes - Machupicchu",

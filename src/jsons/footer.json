@@ -1,11 +1,11 @@
 {
   "companyName": "Sakura Expedition",
   "aboutUsLinks": [
-    {"text": "Acerca de Sakura", "url": "#"},
+    {"text": "Acerca de Sakura Expeditions", "url": "#"},
     {"text": "Políticas de Privacidad", "url": "#"},
     {"text": "Código ESNNA", "url": "#"},
-    {"text": "Términos y Condiciones", "url": "#"},
-    {"text": "Contáctenos", "url": "#"}
+    {"text": "Términos y Condiciones", "url": "#"}
+   
   ],
   "contactInfo": [
     {"type": "email", "value": "ventas@sakuraexpedition.com", "label": "Email de Ventas"},

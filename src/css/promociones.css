@@ -18,6 +18,7 @@
 
 .card-tour {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer; /* Cursor pointer para las cartas */
 }
 
 .card-tour:hover {
@@ -60,7 +61,6 @@
   z-index: 10;
   display: inline-flex;
   align-items: center;
-  
 }
 
 .divider {
@@ -81,5 +81,70 @@
   to {
     opacity: 1;
     transform: scaleX(1);
+  }
+}
+
+/* Estilos para los tabs de destinos */
+.destinos {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+}
+
+.destinos:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Transición suave para el cambio de contenido */
+#cards-container {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Estilos adicionales para mejorar la interactividad */
+.card-tour img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-tour:hover img {
+  transform: scale(1.05);
+}
+
+/* Efecto de glow en los badges al hacer hover en la carta */
+.card-tour:hover .discount-badge {
+  box-shadow: 0 0 10px rgba(170, 37, 46, 0.5);
+}
+
+.card-tour:hover .days-badge {
+  box-shadow: 0 0 10px rgba(226, 126, 8, 0.5);
+}
+
+/* Animación para los iconos de incluye */
+.card-tour:hover .bi {
+  animation: iconPulse 0.5s ease-in-out;
+}
+
+@keyframes iconPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .card-tour {
+    margin-bottom: 1rem;
+  }
+  
+  #destination-tabs {
+    font-size: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .destinos {
+    padding: 0.25rem 0.5rem;
   }
 }

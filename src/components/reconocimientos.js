@@ -6,8 +6,7 @@ function createAwardLogoElement(award) {
     innerHtml = `
       <img src="${award.src}" alt="${award.alt}" class="${award.heightClass} rounded-md">
       <p class="text-center text-sm font-semibold mt-2 text-gray-700">${award.award}</p>
-      ${award.bestOfBest ? `<div class="bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full mt-2 shadow-md">Best of the Best</div>` : ''}
-    `;
+      `;
   } else {
     innerHtml = `
       <img src="${award.src}" alt="${award.alt}" class="${award.heightClass} rounded-md">
@@ -23,7 +22,7 @@ function createAwardLogoElement(award) {
 
 export function getAwardsSectionHTML() {
   return `
-    <section class="bg-gray-50 min-h-screen flex items-center justify-center py-10">
+    <section class="bg-gray-50  flex items-center justify-center py-10">
       <div class="container mx-auto px-4 py-8 bg-white shadow-lg rounded-xl">
         <h2 class="text-3xl font-bold text-center text-gray-800 mb-8 sm:mb-12">Nuestros Reconocimientos</h2>
         <div class="flex flex-wrap items-center justify-center gap-6 md:gap-8 lg:gap-10" id="premios-logos-container">

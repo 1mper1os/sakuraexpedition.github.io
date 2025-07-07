@@ -18,7 +18,7 @@ export function getHeader2HTML() {
         <div class="flex items-center py-2 px-3 rounded-full border" style="color: #aa252e">
           <i class="bi bi-envelope-fill" style="color: #aa252e"></i>
           <div class="leading-tight hidden sm:block ml-2 text-center">
-            <small class="block" style="color: #aa252e">Email</small>
+            
             <span class="font-bold text-gray-800">ventas@sakuraexpedition.com</span>
           </div>
         </div>
@@ -27,7 +27,7 @@ export function getHeader2HTML() {
         <div class="flex items-center py-2 px-3 rounded-full border" style="color: #aa252e">
           <i class="bi bi-whatsapp" style="color: #aa252e"></i>
           <div class="leading-tight hidden sm:block ml-2 text-center">
-            <small class="block" style="color: #aa252e">Ventas y Cotizaciones (+51)</small>
+            
             <span class="font-bold text-gray-800">941 411 418 / 980 532 600</span>
           </div>
         </div>

@@ -174,20 +174,23 @@ function setupCardEvents(cardWrapper, tour, index) {
 }
 
 function setupButtons() {
-  const verMasButton = document.getElementById('ver-mas-salkantay');
+  // CORRECCIÓN: Cambiar el ID para que coincida con el HTML
+  const verMasButton = document.getElementById('ver-mas-destinos');
 
   if (verMasButton) {
     verMasButton.addEventListener('click', handleVerMasClick);
     // Mostrar/ocultar según cantidad de tours
     verMasButton.style.display = salkantayData.length > 3 ? 'block' : 'none';
+  } else {
+    console.warn('Button "ver-mas-destinos" not found');
   }
 }
 
 function handleVerMasClick() {
-  console.log('Ver más tours clicked');
+  console.log('Ver más destinos clicked');
 
   // Dispatch evento personalizado
-  const event = new CustomEvent('verMasSalkantayClick', {
+  const event = new CustomEvent('verMasDestinosClick', {
     detail: {
       action: 'show_more_tours',
       totalTours: salkantayData.length,
@@ -206,7 +209,7 @@ function showAllTours() {
   renderTours(salkantayData, container);
 
   // Ocultar el botón "Ver Más"
-  const verMasButton = document.getElementById('ver-mas-salkantay');
+  const verMasButton = document.getElementById('ver-mas-destinos');
   if (verMasButton) {
     verMasButton.style.display = 'none';
   }
@@ -260,4 +263,18 @@ export function filterTours(filterFn) {
   if (container) {
     renderTours(filteredTours, container);
   }
+}
+
+// Función adicional para mostrar/ocultar el botón programáticamente
+export function toggleVerMasButton(show = true) {
+  const verMasButton = document.getElementById('ver-mas-destinos');
+  if (verMasButton) {
+    verMasButton.style.display = show ? 'block' : 'none';
+  }
+}
+
+// Función para verificar si el botón está visible
+export function isVerMasButtonVisible() {
+  const verMasButton = document.getElementById('ver-mas-destinos');
+  return verMasButton && verMasButton.style.display !== 'none';
 }
