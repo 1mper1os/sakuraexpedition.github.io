@@ -15,7 +15,7 @@ function createPeruPackageCard(pkg) {
           <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
 
           <div class="absolute top-4 right-4 z-20">
-            <div class="bg-[#004351] py-1 px-3 text-sm text-center rounded-lg text-white font-bold shadow-lg backdrop-blur-sm">
+            <div class="bg-[#e25e08] py-1 px-3 text-sm text-center rounded-lg text-white font-bold shadow-lg backdrop-blur-sm">
               <div class="text-xs opacity-90 mb-0.5">Desde USD</div>
               <div class="text-xl font-extrabold leading-none">${pkg.price}</div>
               <div class="text-xs opacity-90 mt-0.5">por persona</div>

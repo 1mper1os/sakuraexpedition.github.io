@@ -76,8 +76,8 @@
   }
 }
 
-.divider7 {
-  width: 25%;
+.divide7 {
+  width: 45%;
   height: 3px;
   background: linear-gradient(to right, #004351 33.33%, #e27208 33.33% 66.66%, #aa252e 66.66% 100%);
   margin: 10px auto 20px;

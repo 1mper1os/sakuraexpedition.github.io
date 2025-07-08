@@ -76,7 +76,7 @@
 .one-day-tours-section header svg {
     width: 1.25rem;
     height: 1.25rem;
-    color: #4f46e5;
+    
 }
 
 .one-day-tours-section .bg-white.rounded-2xl {
@@ -118,7 +118,7 @@
 .one-day-tours-section .bg-white.rounded-2xl ul svg {
     width: 1.25rem;
     height: 1.25rem;
-    color: #4f46e5;
+    
     margin-top: 0.125rem;
     flex-shrink: 0;
 }
@@ -314,7 +314,7 @@
     font-size: 0.875rem;
 }
 .one-day-tour-card-wrapper button:hover {
-    background-color: #4338ca;
+    background-color: #e27e08;
 }
 
 /* "Ver Más" Button Container */

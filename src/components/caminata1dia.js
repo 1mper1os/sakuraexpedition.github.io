@@ -1,6 +1,22 @@
 import oneDayToursData from './../jsons/caminataundia.json';
 import './../css/caminataundia.css';
 
+/**
+ * Handles the click event for a one-day tour card.
+ * This is a placeholder function. In a real application, you would
+ * typically navigate to a detail page, open a modal, or perform
+ * some other action related to the clicked tour.
+ * @param {Object} tour - The tour data object.
+ * @param {number} index - The index of the tour in the data array.
+ */
+function handleOneDayTourCardClick(tour, index) {
+  // console.log(`Tour clicked: ${tour.title} (Index: ${index})`);
+  // console.log("Implement navigation or modal display logic here.");
+  // Example: Redirect to a detail page (if you had one)
+  // window.location.href = `/tours/one-day/${tour.id}`;
+  alert(`Has hecho clic en el tour: ${tour.title}`);
+}
+
 function createOneDayTourCard(tour) {
   return `
     <div class="one-day-tour-card-wrapper group">
@@ -48,7 +64,7 @@ function createOneDayTourCard(tour) {
           </div>
 
           <div class="pt-2 border-t border-gray-100">
-            <button class="w-full bg-[#e27e08] text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-200 text-sm">
+            <button class="w-full bg-[#e27e08] text-white py-2 px-4 rounded-lg font-semibold hover:bg-[#e27e08] transition-colors duration-200 text-sm">
               Ver Detalles
             </button>
           </div>
@@ -60,13 +76,10 @@ function createOneDayTourCard(tour) {
 
 export function getundia() {
   let tourCardsHtml = '';
-  
 
   if (oneDayToursData && oneDayToursData.length > 0) {
     const toursToShow = oneDayToursData.slice(0, 3);
     tourCardsHtml = toursToShow.map(tour => createOneDayTourCard(tour)).join('');
-
-    
   } else {
     tourCardsHtml = '<p class="text-center text-gray-500 col-span-full">No hay tours de un día disponibles en este momento.</p>';
   }
@@ -81,11 +94,9 @@ export function getundia() {
           <div class="mx-auto divider8"></div>
           <p class="max-w-5xl mx-auto mb-8 text-center text-lg leading-relaxed text-gray-700">
             Disfruta de los mejores tours de Aventura en Cusco, descubre la Montaña de 7 Colores, la Laguna de Humantay, la montaña de colores Pallaypunchu, Waqrapukara, Las 7 lagunas de Ausangate y más.
-            Disfruta de experiencias únicas y descubre los impresionantes paisajes que rodean la ciudad del Cusco donde además podrás relajarte y aprender sobre la cultura de los pobladores locales y la cosmovisión andina. 
+            Disfruta de experiencias únicas y descubre los impresionantes paisajes que rodean la ciudad del Cusco donde además podrás relajarte y aprender sobre la cultura de los pobladores locales y la cosmovisión andina.
           </p>
         </header>
-        
-        
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" id="one-day-tours-cards-container">
           ${tourCardsHtml}
@@ -113,8 +124,16 @@ export function initOneDayToursLogic() {
     return;
   }
 
+  // Ensure oneDayToursData is available before proceeding
+  if (!oneDayToursData || oneDayToursData.length === 0) {
+    console.warn('No oneDayToursData available to attach event listeners.');
+    return;
+  }
+
   Array.from(container.children).forEach((cardWrapper, index) => {
-    if (oneDayToursData[index]) {
+    // Only attach listener if corresponding data exists and it's within the sliced range (0 to 3)
+    // The rendered cards are based on `toursToShow = oneDayToursData.slice(0, 3);` in `getundia()`
+    if (index < 3 && oneDayToursData[index]) {
       cardWrapper.addEventListener('click', () => handleOneDayTourCardClick(oneDayToursData[index], index));
       cardWrapper.style.cursor = 'pointer';
       cardWrapper.setAttribute('role', 'button');
@@ -130,11 +149,22 @@ export function initOneDayToursLogic() {
     }
   });
 
+  // Event listener for the "Ver Más Destinos" button
+  const verMasButton = document.getElementById('ver-mas-destinos');
+  if (verMasButton) {
+    verMasButton.addEventListener('click', () => {
+      // Implement the logic for "Ver Más Destinos" here.
+      // This could involve:
+      // 1. Redirecting to a dedicated "all tours" page.
+      // 2. Loading more tours dynamically (if you have more than 3).
+      // 3. Opening a modal with all tours.
+      // For now, let's just log a message.
+      // console.log("Ver Más Destinos button clicked!");
+      alert("¡Ver Más Destinos ha sido clickeado! Aquí iría la lógica para mostrar más tours o navegar a otra página.");
+      // Example: window.location.href = '/all-one-day-tours';
+    });
+  }
 }
-
-
-
-
 
 export function oneDayTours() {
   return getundia();
@@ -156,15 +186,24 @@ export function refreshOneDayTourCards() {
 
     let tourCardsHtml = '';
     if (oneDayToursData && oneDayToursData.length > 0) {
-        const toursToShow = oneDayToursData.slice(0, 3);
-        tourCardsHtml = toursToShow.map(tour => createOneDayTourCard(tour)).join('');
+      const toursToShow = oneDayToursData.slice(0, 3); // Still showing only the first 3
+      tourCardsHtml = toursToShow.map(tour => createOneDayTourCard(tour)).join('');
     } else {
-        tourCardsHtml = '<p class="text-center text-gray-500 col-span-full">No hay tours de un día disponibles en este momento.</p>';
+      tourCardsHtml = '<p class="text-center text-gray-500 col-span-full">No hay tours de un día disponibles en este momento.</p>';
     }
     newContainerDiv.innerHTML = tourCardsHtml;
 
-    
+    // Append the new container before the "Ver Más Destinos" button,
+    // which is the last child of containerParent that is not the container itself.
+    // A more robust way might be to have a specific parent for the cards,
+    // and append `newContainerDiv` to it.
+    const verMasButtonWrapper = containerParent.querySelector('.text-center.mx-auto');
+    if (verMasButtonWrapper) {
+      containerParent.insertBefore(newContainerDiv, verMasButtonWrapper);
+    } else {
+      containerParent.appendChild(newContainerDiv); // Fallback if button wrapper not found
+    }
   }
 
-  initOneDayToursLogic();
+  initOneDayToursLogic(); // Re-initialize event listeners for the new cards
 }
