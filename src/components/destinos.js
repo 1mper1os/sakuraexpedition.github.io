@@ -3,62 +3,53 @@ import './../css/destinos.css';
 
 function createDestinosTourCard(tour) {
   return `
-    <div class="destinos-tour-card-wrapper group">
-      <div class="rounded-xl overflow-hidden relative bg-white shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl border border-gray-100">
-        <div class="relative overflow-hidden">
+    <div class="one-day-tour-card-wrapper group">
+      <div class="rounded-xl overflow-hidden relative bg-white shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl border border-gray-100 flex flex-col h-full">
+        <div class="relative overflow-hidden flex-shrink-0">
           <img
             src="${tour.image}"
             alt="${tour.alt}"
-            class="w-full h-[280px] object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+            class="w-full h-52 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
             loading="lazy"
           >
           <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
 
           <div class="absolute top-4 right-4 z-20">
-            <div class="bg-[#aa252e] py-2 px-3 text-sm text-center rounded-lg text-white font-bold shadow-lg backdrop-blur-sm">
-              <div class="text-xs opacity-90 mb-1">Desde USD</div>
-              <div class="text-2xl font-extrabold leading-none">${tour.price}</div>
-              <div class="text-xs opacity-90 mt-1">por persona</div>
-              ${tour.oldPrice ? `<div class="text-xs opacity-70 mt-1 line-through">antes ${tour.oldPrice}</div>` : ''}
+            <div class="bg-[#e25e08] py-1 px-3 text-sm text-center rounded-lg text-white font-bold shadow-lg backdrop-blur-sm">
+              <div class="text-xs opacity-90 mb-0.5">Desde USD</div>
+              <div class="text-xl font-extrabold leading-none">${tour.price}</div>
+              <div class="text-xs opacity-90 mt-0.5">por persona</div>
             </div>
           </div>
 
           <div class="absolute bottom-0 left-0 p-4 w-full z-10">
-            <h3 class="text-xl mb-2 font-bold text-white leading-tight">${tour.title}</h3>
-            <div class="flex items-center gap-2 text-sm text-white/90">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
-              </svg>
-              <span>${tour.days}</span>
-            </div>
+            <h3 class="text-lg font-bold text-white leading-tight">${tour.title}</h3>
           </div>
         </div>
 
-        <div class="p-4 space-y-3">
-          <div class="flex items-center gap-2 text-sm text-gray-600">
-            <svg class="w-4 h-4 text-[#aa252e]" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-            </svg>
-            <span>${tour.location || 'Perú'}</span>
-          </div>
+        <div class="p-4 flex-grow flex flex-col justify-between">
+          <div>
+            <p class="text-sm text-gray-700 mb-3 text-description-80">${tour.description || 'Descubre este increíble destino con nuestra oferta especial.'}</p>
 
-          <div class="flex items-center gap-2 text-sm text-gray-600">
-            <svg class="w-4 h-4 text-[#aa252e]" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <span>Guía profesional incluido</span>
-          </div>
-
-          <div class="flex items-center gap-2 text-sm text-gray-600">
-            <svg class="w-4 h-4 text-[#aa252e]" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
-            </svg>
-            <span>Disponible todo el año</span>
+            <div class="space-y-2 text-gray-600 text-sm mb-4">
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-[#004351]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                </svg>
+                <span>${tour.duration || 'Duración no especificada'}</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-[#004351]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>${tour.location || 'Perú'}</span>
+              </div>
+            </div>
           </div>
 
           <div class="pt-2 border-t border-gray-100">
-            <button class="w-full bg-[#aa252e] text-white py-2 px-4 rounded-lg font-semibold hover:bg-[#8a1f26] transition-colors duration-200 text-sm">
-              Ver Detalles y Reservar
+            <button class="w-full bg-[#004351] text-white py-2 px-4 rounded-lg font-semibold hover:bg-[#004351] transition-colors duration-200 text-sm">
+              Ver Detalles
             </button>
           </div>
         </div>
@@ -82,13 +73,13 @@ export function getDestinosHTML() {
           </p>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" id="destinos-cards-container">
-          </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" id="destinos-cards-container">
+        </div>
 
         <div class="text-center mx-auto">
           <button
             id="ver-mas-destinos"
-            class="mx-auto bg-gradient-to-r from-[#aa252e] to-[#8a1f26] text-white px-8 py-4 rounded-full font-bold text-lg hover:from-[#8a1f26] hover:to-[#aa252e] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            class="mx-auto bg-gradient-to-r from-[#004351] to-[#004358] text-white px-8 py-4 rounded-full font-bold text-lg hover:from-[#004451] hover:to-[#004458] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
             Ver Más Destinos
             <svg class="w-5 h-5 ml-2 inline-block" fill="currentColor" viewBox="0 0 20 20">
@@ -103,7 +94,7 @@ export function getDestinosHTML() {
 
 export function initDestinosLogic() {
   const container = document.getElementById("destinos-cards-container");
-  
+
   if (!container) {
     console.warn('Container "destinos-cards-container" not found');
     return;
@@ -140,7 +131,7 @@ function renderTours(tours, container) {
     cardElement.innerHTML = createDestinosTourCard(tour);
 
     const cardWrapper = cardElement.firstElementChild;
-    
+
     // Configurar eventos
     setupCardEvents(cardWrapper, tour, index);
 
@@ -212,7 +203,7 @@ function showAllTours() {
 
 function handleTourCardClick(tour, index) {
   console.log('Destino clicked:', tour.title, 'Index:', index);
-  
+
   // Dispatch evento personalizado
   const event = new CustomEvent('destinoCardClick', {
     detail: { tour, index }
@@ -251,7 +242,7 @@ export function filterDestinos(filterFn) {
 
   const filteredTours = destinosData.filter(filterFn);
   const container = document.getElementById("destinos-cards-container");
-  
+
   if (container) {
     renderTours(filteredTours, container);
   }

@@ -17,10 +17,10 @@ function getCardsPerGroup() {
 
 function getCardWidth() {
     const width = window.innerWidth;
-    if (width < 480) return Math.min(width - 40, 350); // Móvil pequeño
-    if (width < 768) return Math.min(width - 60, 380); // Móvil
-    if (width < 1024) return 360; // Tablet
-    return 380; // Desktop
+    if (width < 480) return Math.min(width - 40, 350);
+    if (width < 768) return Math.min(width - 60, 380);
+    if (width < 1024) return 360;
+    return 380;
 }
 
 function createTrainTourCard(tour, index) {
@@ -48,10 +48,8 @@ function createTrainTourCard(tour, index) {
                         </button>
                     </div>
                 </div>
-                
             </div>
         </div>
-        
     `;
 }
 
@@ -70,6 +68,26 @@ export function getTrainToursHTML() {
                     </p>
                 </div>
             </div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center p-6 space-y-4 sm:space-y-0">
+ 
+                <div class="flex items-center text-[#e27e08] space-x-2">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+                </svg>
+
+                    <span class="font-semibold text-xl tracking-tight text-[#004351]">Tours más recomendados</span>
+                </div>
+
+
+                <div>
+                    <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-[#004351] border-[#004351] hover:border-transparent hover:text-white hover:bg-[#e27e08] transition-colors duration-300">
+                    Ver Más
+                    </a>
+                </div>
+            </div>
+
             
             <div class="carousel-container">
                 <button class="carousel-button carousel-button-prev" onclick="window.slideTrainCarousel(-1)" aria-label="Anterior">
@@ -84,17 +102,8 @@ export function getTrainToursHTML() {
                 
                 <div class="carousel-indicators" id="carousel-indicators"></div>
             </div>
-            <div class="text-center mx-auto">
-          <button
-            id="ver-mas-destinos"
-            class="mt-15 mx-auto bg-gradient-to-r from-[#004351] to-[#004358] text-white px-8 py-4 rounded-full font-bold text-lg hover:from-[#004451] hover:to-[#004458] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-          >
-            Ver Más Destinos
-            <svg class="w-5 h-5 ml-2 inline-block" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
+
+            
         </div>
     `;
 }
@@ -107,14 +116,12 @@ export function initTrainToursLogic() {
     const cardWidth = getCardWidth();
     const gap = window.innerWidth < 768 ? 16 : 24;
 
-    // Crear cartas
     const originalCardsHtml = trainToursData.map((tour, idx) => createTrainTourCard(tour, idx)).join("");
     const clonedPrefixHtml = trainToursData.slice(-cardsPerGroup).map((tour, idx) => createTrainTourCard(tour, idx - cardsPerGroup)).join("");
     const clonedSuffixHtml = trainToursData.slice(0, cardsPerGroup).map((tour, idx) => createTrainTourCard(tour, idx + trainToursData.length)).join("");
 
     container.innerHTML = clonedPrefixHtml + originalCardsHtml + clonedSuffixHtml;
 
-    // Crear indicadores
     createCarouselIndicators();
 
     setTimeout(() => {
@@ -128,23 +135,14 @@ export function initTrainToursLogic() {
         startAutoSlide();
     }, 100);
 
-    // Event listeners
     window.slideTrainCarousel = slideTrainCarousel;
     window.handleReadMore = handleReadMore;
-    
-    // Touch events para móviles
     container.addEventListener('touchstart', handleTouchStart, { passive: true });
     container.addEventListener('touchmove', handleTouchMove, { passive: false });
     container.addEventListener('touchend', handleTouchEnd, { passive: true });
-    
-    // Mouse events
     container.addEventListener('mouseenter', pauseAutoSlide);
     container.addEventListener('mouseleave', startAutoSlide);
-    
-    // Scroll events
     container.addEventListener('scroll', throttle(updateCarouselIndicators, 100));
-
-    // Resize event
     window.addEventListener('resize', throttle(handleResize, 250));
 }
 
@@ -170,11 +168,11 @@ function updateCarouselIndicators() {
     const itemFullWidth = cardWidth + gap;
     const cardsPerGroup = getCardsPerGroup();
     const totalClonedPrefixCards = cardsPerGroup;
-    
+
     const currentIndex = Math.round((container.scrollLeft - (itemFullWidth * totalClonedPrefixCards)) / (itemFullWidth * cardsPerGroup));
     const actualIndex = ((currentIndex % trainToursData.length) + trainToursData.length) % trainToursData.length;
     const indicatorIndex = Math.floor(actualIndex / cardsPerGroup);
-    
+
     indicators.forEach((indicator, index) => {
         indicator.classList.toggle('active', index === indicatorIndex);
     });
@@ -187,49 +185,40 @@ function handleTouchStart(e) {
 
 function handleTouchMove(e) {
     if (isScrolling) return;
-    
     touchEndX = e.touches[0].clientX;
     const diff = touchStartX - touchEndX;
-    
     if (Math.abs(diff) > 10) {
         e.preventDefault();
         isScrolling = true;
     }
 }
 
-function handleTouchEnd(e) {
+function handleTouchEnd() {
     if (!isScrolling) {
         startAutoSlide();
         return;
     }
-    
+
     const diff = touchStartX - touchEndX;
     const threshold = 50;
-    
+
     if (Math.abs(diff) > threshold) {
-        if (diff > 0) {
-            slideTrainCarousel(1); // Swipe left - next
-        } else {
-            slideTrainCarousel(-1); // Swipe right - prev
-        }
+        slideTrainCarousel(diff > 0 ? 1 : -1);
     }
-    
+
     isScrolling = false;
     setTimeout(startAutoSlide, 100);
 }
 
 function handleReadMore(event, index) {
     event.stopPropagation();
-    // Aquí puedes agregar la lógica para mostrar más detalles del tour
     console.log(`Leer más sobre el tour ${index}:`, trainToursData[index]);
-    // Ejemplo: abrir modal, navegar a otra página, etc.
 }
 
 function handleResize() {
     const container = document.getElementById("train-carousel");
     if (!container) return;
-    
-    // Reinicializar el carousel con las nuevas dimensiones
+
     pauseAutoSlide();
     setTimeout(() => {
         initTrainToursLogic();
@@ -244,35 +233,28 @@ function slideTrainCarousel(direction) {
     const cardWidth = getCardWidth();
     const gap = window.innerWidth < 768 ? 16 : 24;
     const itemFullWidth = cardWidth + gap;
-    
+
     pauseAutoSlide();
 
     const originalDataLength = trainToursData.length;
     const totalClonedPrefixCards = cardsPerGroup;
-    const totalClonedSuffixCards = cardsPerGroup;
 
     let targetScrollLeft = container.scrollLeft + (direction * itemFullWidth * cardsPerGroup);
-
     container.style.scrollBehavior = 'smooth';
     container.scrollLeft = targetScrollLeft;
 
-    // Infinite loop logic
-    if (direction === 1) {
-        if (container.scrollLeft >= (itemFullWidth * (originalDataLength + totalClonedPrefixCards - cardsPerGroup))) {
-            setTimeout(() => {
-                container.style.scrollBehavior = 'auto';
-                container.scrollLeft = itemFullWidth * totalClonedPrefixCards;
-                updateCarouselIndicators();
-            }, 600);
-        }
-    } else {
-        if (container.scrollLeft <= (itemFullWidth * totalClonedPrefixCards)) {
-            setTimeout(() => {
-                container.style.scrollBehavior = 'auto';
-                container.scrollLeft = itemFullWidth * (originalDataLength + totalClonedPrefixCards - cardsPerGroup);
-                updateCarouselIndicators();
-            }, 600);
-        }
+    if (direction === 1 && container.scrollLeft >= (itemFullWidth * (originalDataLength + totalClonedPrefixCards - cardsPerGroup))) {
+        setTimeout(() => {
+            container.style.scrollBehavior = 'auto';
+            container.scrollLeft = itemFullWidth * totalClonedPrefixCards;
+            updateCarouselIndicators();
+        }, 600);
+    } else if (direction === -1 && container.scrollLeft <= (itemFullWidth * totalClonedPrefixCards)) {
+        setTimeout(() => {
+            container.style.scrollBehavior = 'auto';
+            container.scrollLeft = itemFullWidth * (originalDataLength + totalClonedPrefixCards - cardsPerGroup);
+            updateCarouselIndicators();
+        }, 600);
     }
 
     setTimeout(() => {
@@ -290,14 +272,13 @@ function goToSlide(index) {
     const gap = window.innerWidth < 768 ? 16 : 24;
     const itemFullWidth = cardWidth + gap;
     const totalClonedPrefixCards = cardsPerGroup;
-    
+
     pauseAutoSlide();
-    
+
     const targetScrollLeft = itemFullWidth * (totalClonedPrefixCards + (index * cardsPerGroup));
-    
     container.style.scrollBehavior = 'smooth';
     container.scrollLeft = targetScrollLeft;
-    
+
     setTimeout(() => {
         updateCarouselIndicators();
         startAutoSlide();
@@ -305,8 +286,7 @@ function goToSlide(index) {
 }
 
 function startAutoSlide() {
-    if (window.innerWidth < 768) return; // No auto-slide en móviles
-    
+    if (window.innerWidth < 768) return;
     clearInterval(autoSlideInterval);
     autoSlideInterval = setInterval(() => {
         slideTrainCarousel(1);
@@ -322,7 +302,6 @@ function throttle(func, delay) {
     let lastExecTime = 0;
     return function (...args) {
         const currentTime = Date.now();
-        
         if (currentTime - lastExecTime > delay) {
             func.apply(this, args);
             lastExecTime = currentTime;
@@ -344,7 +323,6 @@ export function initTrainTours() {
     initTrainToursLogic();
 }
 
-// Expose functions to global scope
 window.slideTrainCarousel = slideTrainCarousel;
 window.startAutoSlide = startAutoSlide;
 window.pauseAutoSlide = pauseAutoSlide;
